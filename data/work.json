@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Common Minimum API",
+    "description": "The minimal collection of Web Platform APIs that ought to be implemented by Web-interoperable runtimes",
+    "repo": "proposal-common-minimum-api"
+  },
+  {
+    "name": "Web Crypto Streams",
+    "description": "A proposal to define streaming support in Web Crypto APIs",
+    "repo": "proposal-webcrypto-streams"
+  }
+]
