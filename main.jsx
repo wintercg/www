@@ -6,6 +6,8 @@ import { serve } from "https://deno.land/std@0.135.0/http/server.ts";
 import { serveDir } from "https://deno.land/std@0.135.0/http/file_server.ts";
 import { h, ssr } from "https://crux.land/nanossr@0.0.4";
 
+import work from "./data/work.json" assert { type: "json" };
+
 function Home() {
   return (
     <Layout>
@@ -37,6 +39,36 @@ function Work() {
   return (
     <Layout>
       <Header />
+      <Links selected="/work" />
+      <p class="mt-12 text-lg">
+        The WinterCG is currently working on various efforts to improve web
+        platform APIs across runtimes:
+      </p>
+      <ul class="mt-8 space-y-6">
+        {work.map((item) => (
+          <li>
+            <h3 class="text-xl font-medium">{item.name}</h3>
+            <p class="text-lg">{item.description}</p>
+            <p class="flex gap-4">
+              <a
+                href={`https://github.com/wintercg/${item.repo}`}
+                class="text-pink-500 hover:text-pink-700 hover:underline"
+              >
+                Repository
+              </a>
+              {item.specification && (
+                <a
+                  href={item.specification}
+                  class="text-pink-500 hover:text-pink-700 hover:underline"
+                >
+                  Specification
+                </a>
+              )}
+            </p>
+          </li>
+        ))}
+      </ul>
+      <Footer />
     </Layout>
   );
 }
@@ -45,6 +77,7 @@ function Faq() {
   return (
     <Layout>
       <Header />
+      <Links selected="/faq" />
     </Layout>
   );
 }
@@ -63,10 +96,10 @@ function Header() {
       <TODO>
         <img src="/static/logo.svg" alt="wintercg logo" class="w-24 h-24" />
       </TODO>
-      <div class="space-y-1">
+      <a href="/" class="block space-y-1">
         <h1 class="text-4xl font-semibold">WinterCG</h1>
         <p class="italic text-xl">Web-interoperable Runtimes Community Group</p>
-      </div>
+      </a>
     </section>
   );
 }
@@ -90,14 +123,18 @@ const LINKS = [
   },
 ];
 
-function Links() {
+function Links(props) {
   return (
     <ul class="mt-8 grid gap-2 sm:gap-3 md:gap-4 grid-cols-4">
       {LINKS.map((link) => (
         <li>
           <a
-            href={link.href}
-            class="block bg-pink-500 border-4 border-pink-300 hover:border-pink-600 sm:p-2 md:p-3 font-medium text-lg text-center text-white"
+            href={props.selected === link.href ? undefined : link.href}
+            class={`block border-4 ${
+              props.selected === link.href
+                ? "bg-pink-200 text-black border-pink-300"
+                : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
+            } sm:p-2 md:p-3 font-medium text-lg text-center`}
           >
             {link.name}
           </a>
@@ -181,6 +218,7 @@ await serve((req) => {
     return serveDir(req, {
       urlRoot: "static",
       fsRoot: "./static",
+      quiet: true,
     });
   } else {
     return new Response("Not Found", { status: 404 });
