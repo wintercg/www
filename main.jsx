@@ -86,7 +86,7 @@ function Faq() {
           <p>
             The Web-interoperable Runtimes Community Group (WinterCG) is a
             community of people who are interested in using Web Platform APIs
-            outside of browsers, namely on the server (Deno / Node) or edge
+            outside of browsers, namely on the server (Deno / Node.js) or edge
             runtimes (Cloudflare Workers / Deno).
           </p>
           <p>
@@ -130,7 +130,7 @@ function Faq() {
           </p>
           <p>
             We want to provide feedback to spec authors of Web Platform APIs
-            from the view point of non-Browser runtimes to help them make
+            from the view point of non-browser runtimes to help them make
             informed decisions about future specification changes.
           </p>
           <p>
@@ -200,7 +200,7 @@ function Faq() {
           <p>
             The group strives for rough consensus among contributors for changes
             to work products. Instead of formal consensus, the editors for a
-            given work product makes the judgement on wether a change is ready
+            given work product make the judgement on whether a change is ready
             for inclusion and has enough support from the group. The group
             itself has a strict consensus policy outlined in the charter, which
             is oversought by the group chairs.
