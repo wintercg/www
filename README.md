@@ -1,2 +1,3 @@
 # www
-The website for this community group
+
+The website for this community group.
