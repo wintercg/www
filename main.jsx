@@ -14,7 +14,6 @@ function Home() {
       <Header />
       <Links />
       <p class="mt-12 text-lg text-justify">
-        {/* TODO: import text from ./data/intro.md */}
         This community group aims to provide a space for JS runtimes to
         collaborate on API interoperability. We focus on documenting and
         improving interoperability of web platform APIs across runtimes
@@ -216,8 +215,8 @@ function Faq() {
             and help guide the group towards consensus on proposed changes.
           </p>
           <p>
-            Currently the group consists of individual members, and members
-            representing the following organizations:
+            Currently the group consists of individual members, and members from
+            the following organizations:
           </p>
           <ul class="list-disc pl-7">
             <li>Bloomberg</li>
