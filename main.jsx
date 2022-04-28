@@ -347,13 +347,10 @@ function Footer() {
   return (
     <footer class="mt-16 text-center border-t-1 border-gray-100 p-4">
       <p class="text-sm text-gray-600">
-        Copyright © <TODO>WinterCG / W3C</TODO>. This work is licensed under an
-        {"  "}
-        <TODO>
-          <a href="https://github.com/wintercg/www/blob/main/LICENSE">
-            MIT license
-          </a>
-        </TODO>.
+        Copyright © WinterCG. This work is licensed under the{" "}
+        <a href="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">
+          W3C Software and Document License
+        </a>.
       </p>
     </footer>
   );
