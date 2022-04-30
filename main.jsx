@@ -306,7 +306,28 @@ function Links(props) {
   );
 }
 
-const LOGOS = [
+const RUNTIME_LOGOS = [
+  {
+    src: "/static/logos/cloudflare-workers.svg",
+    href: "https://workers.cloudflare.com/",
+    name: "Cloudflare",
+  },
+  {
+    src: "/static/logos/deno.svg",
+    href: "https://deno.land/",
+    name: "Deno",
+  },
+  /**
+   * Hopefully we'll get permission to use the Node.js logo soon.
+   * {
+   *   src: "/static/logos/nodejs.svg",
+   *   href: "https://nodejs.org/",
+   *   name: "Node.js",
+   * },
+  **/
+];
+
+const PARTNER_LOGOS = [
   {
     src: "/static/logos/cloudflare.svg",
     href: "https://cloudflare.com/",
@@ -317,18 +338,27 @@ const LOGOS = [
     href: "https://deno.com/",
     name: "Deno",
   },
-  {
-    src: "/static/logos/nodejs.svg",
-    href: "https://nodejs.org/",
-    name: "Node.js",
-  },
+  /** TODO: Add additional logos here */
 ];
 
 function Logos() {
   return (
     <div class="mt-16">
       <ul class="mt-4 flex justify-between sm:justify-evenly">
-        {LOGOS.map(({ src, href, name }) => (
+        {RUNTIME_LOGOS.map(({ src, href, name }) => (
+          <a href={href}>
+            <img
+              src={src}
+              title={`${name} logo`}
+              alt={`${name} logo`}
+              class="h-16 sm:h-20"
+            />
+          </a>
+        ))}
+      </ul>
+      <p>The work of the WinterCG is sponsored, in part, by:</p>
+      <ul class="mt-4 flex justify-between sm:justify-evenly">
+        {PARTNER_LOGOS.map(({ src, href, name }) => (
           <a href={href}>
             <img
               src={src}
