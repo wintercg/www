@@ -310,7 +310,7 @@ const RUNTIME_LOGOS = [
   {
     src: "/static/logos/cloudflare-workers.svg",
     href: "https://workers.cloudflare.com/",
-    name: "Cloudflare",
+    name: "Cloudflare Workers",
   },
   {
     src: "/static/logos/deno.svg",
@@ -324,7 +324,7 @@ const RUNTIME_LOGOS = [
    *   href: "https://nodejs.org/",
    *   name: "Node.js",
    * },
-  **/
+   */
 ];
 
 const PARTNER_LOGOS = [
@@ -343,8 +343,8 @@ const PARTNER_LOGOS = [
 
 function Logos() {
   return (
-    <div class="mt-16">
-      <ul class="mt-4 flex justify-between sm:justify-evenly">
+    <div>
+      <ul class="mt-16 flex justify-evenly">
         {RUNTIME_LOGOS.map(({ src, href, name }) => (
           <a href={href}>
             <img
@@ -356,15 +356,15 @@ function Logos() {
           </a>
         ))}
       </ul>
-      <p>The work of the WinterCG is sponsored, in part, by:</p>
-      <ul class="mt-4 flex justify-between sm:justify-evenly">
+      <p class="mt-16">The work of the WinterCG is sponsored, in part, by:</p>
+      <ul class="mt-8 flex justify-evenly">
         {PARTNER_LOGOS.map(({ src, href, name }) => (
           <a href={href}>
             <img
               src={src}
               title={`${name} logo`}
               alt={`${name} logo`}
-              class="h-16 sm:h-20"
+              class="h-12 sm:h-16"
             />
           </a>
         ))}
