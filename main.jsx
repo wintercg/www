@@ -343,8 +343,8 @@ const PARTNER_LOGOS = [
 
 function Logos() {
   return (
-    <div class="mt-16">
-      <ul class="my-16 flex justify-evenly">
+    <div>
+      <ul class="mt-16 flex justify-evenly">
         {RUNTIME_LOGOS.map(({ src, href, name }) => (
           <a href={href}>
             <img
@@ -356,7 +356,7 @@ function Logos() {
           </a>
         ))}
       </ul>
-      <p class="mt-8">The work of the WinterCG is sponsored, in part, by:</p>
+      <p class="mt-16">The work of the WinterCG is sponsored, in part, by:</p>
       <ul class="mt-8 flex justify-evenly">
         {PARTNER_LOGOS.map(({ src, href, name }) => (
           <a href={href}>
