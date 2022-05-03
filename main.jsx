@@ -255,9 +255,9 @@ function Layout(props) {
 function Header() {
   return (
     <section class="flex items-center gap-6">
-      <TODO>
+      <a href="/">
         <img src="/static/logo.svg" alt="wintercg logo" class="w-24 h-24" />
-      </TODO>
+      </a>
       <a href="/" class="block space-y-1">
         <h1 class="text-4xl font-semibold">WinterCG</h1>
         <p class="italic text-xl">Web-interoperable Runtimes Community Group</p>
@@ -393,14 +393,6 @@ function Footer() {
         </a>.
       </p>
     </footer>
-  );
-}
-
-function TODO(props) {
-  return (
-    <span class="border-red-500 border-2">
-      {props.children}
-    </span>
   );
 }
 
