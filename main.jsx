@@ -342,6 +342,7 @@ const PARTNER_LOGOS = [
     src: "/static/logos/vercel.svg",
     href: "https://vercel.com/",
     name: "Vercel",
+    restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
 ];
@@ -361,15 +362,19 @@ function Logos() {
           </a>
         ))}
       </ul>
-      <p class="mt-16">The work of the WinterCG is sponsored, in part, by:</p>
-      <ul class="mt-8 flex justify-evenly">
-        {PARTNER_LOGOS.map(({ src, href, name }) => (
+      <p class="mt-16 text-center">
+        The work of the WinterCG is supported by:
+      </p>
+      <ul class="mt-8 flex justify-between sm:justify-evenly items-center h-16">
+        {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
           <a href={href}>
             <img
               src={src}
               title={`${name} logo`}
               alt={`${name} logo`}
-              class="h-12 sm:h-16"
+              class={restrict === "horizontal"
+                ? "w-28 sm:w-36"
+                : "h-12 sm:h-16"}
             />
           </a>
         ))}
