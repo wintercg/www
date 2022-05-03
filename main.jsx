@@ -338,6 +338,11 @@ const PARTNER_LOGOS = [
     href: "https://deno.com/",
     name: "Deno",
   },
+  {
+    src: "/static/logos/vercel.svg",
+    href: "https://vercel.com/",
+    name: "Vercel",
+  },
   /** TODO: Add additional logos here */
 ];
 
