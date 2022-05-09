@@ -4,7 +4,7 @@
 /** @jsxFrag Fragment */
 import { serve } from "https://deno.land/std@0.135.0/http/server.ts";
 import { serveDir } from "https://deno.land/std@0.135.0/http/file_server.ts";
-import { h, ssr } from "https://crux.land/nanossr@0.0.4";
+import { Fragment, h, Helmet, ssr } from "https://crux.land/nanossr@0.0.4";
 
 import work from "./data/work.json" assert { type: "json" };
 
@@ -244,11 +244,29 @@ function Faq() {
   );
 }
 
+const DESCRIPTION =
+  "The Web-interoperable Runtimes Community Group aims to provide a space for JS runtimes to collaborate on API interoperability.";
+
 function Layout(props) {
   return (
-    <div class="mx-auto px-4 py-8 max-w-screen-md">
-      {props.children}
-    </div>
+    <>
+      <Helmet>
+        <title>WinterCG</title>
+        <link
+          rel="shortcut icon"
+          href="/static/logo.svg"
+          type="image/svg+xml"
+        />
+        <meta name="description" content={DESCRIPTION} />
+        <meta name="og:title" content="WinterCG" />
+        <meta name="og:description" content={DESCRIPTION} />
+        <meta name="og:image" content="https://wintercg.org/static/cover.png" />
+        <meta name="og:url" content="https://wintercg.org" />
+      </Helmet>
+      <div class="mx-auto px-4 py-8 max-w-screen-md">
+        {props.children}
+      </div>
+    </>
   );
 }
 
@@ -388,7 +406,10 @@ function Footer() {
     <footer class="mt-16 text-center border-t-1 border-gray-100 p-4">
       <p class="text-sm text-gray-600">
         Copyright © WinterCG. This work is licensed under the{" "}
-        <a href="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">
+        <a
+          href="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"
+          class="hover:underline"
+        >
           W3C Software and Document License
         </a>.
       </p>
