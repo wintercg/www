@@ -262,6 +262,7 @@ function Layout(props) {
         <meta name="og:description" content={DESCRIPTION} />
         <meta name="og:image" content="https://wintercg.org/static/cover.png" />
         <meta name="og:url" content="https://wintercg.org" />
+        <meta name="og:type" content="website" />
       </Helmet>
       <div class="mx-auto px-4 py-8 max-w-screen-md">
         {props.children}
