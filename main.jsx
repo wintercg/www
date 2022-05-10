@@ -346,7 +346,7 @@ const PARTNER_LOGOS = [
     restrict: "horizontal",
   },
   {
-    src: "/static/logos/igalia.svg",
+    src: "/static/logos/igalia.png",
     href: "https://igalia.com/",
     name: "Igalia",
     restrict: "horizontal",
