@@ -274,7 +274,7 @@ function Layout(props) {
 function Header() {
   return (
     <section class="flex items-center gap-6">
-      <a href="/">
+      <a class="flex-shrink-0" href="/">
         <img src="/static/logo.svg" alt="wintercg logo" class="w-24 h-24" />
       </a>
       <a href="/" class="block space-y-1">
