@@ -363,6 +363,12 @@ const PARTNER_LOGOS = [
     name: "Vercel",
     restrict: "horizontal",
   },
+  {
+    src: "/static/logos/shopify.svg",
+    href: "https://shopify.dev/",
+    name: "Shopify",
+    restrict: "horizontal",
+  },
   /** TODO: Add additional logos here */
 ];
 
