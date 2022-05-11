@@ -325,6 +325,7 @@ function Links(props) {
   );
 }
 
+// NOTE to all: keep this list sorted alphabetically by name.
 const RUNTIME_LOGOS = [
   {
     src: "/static/logos/cloudflare-workers.svg",
@@ -346,6 +347,7 @@ const RUNTIME_LOGOS = [
    */
 ];
 
+// NOTE to all: keep this list sorted alphabetically by name.
 const PARTNER_LOGOS = [
   {
     src: "/static/logos/cloudflare.svg",
@@ -358,15 +360,15 @@ const PARTNER_LOGOS = [
     name: "Deno",
   },
   {
-    src: "/static/logos/vercel.svg",
-    href: "https://vercel.com/",
-    name: "Vercel",
-    restrict: "horizontal",
-  },
-  {
     src: "/static/logos/shopify.svg",
     href: "https://shopify.dev/",
     name: "Shopify",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/vercel.svg",
+    href: "https://vercel.com/",
+    name: "Vercel",
     restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
@@ -390,7 +392,7 @@ function Logos() {
       <p class="mt-16 text-center">
         The work of the WinterCG is supported by:
       </p>
-      <ul class="mt-8 flex justify-between sm:justify-evenly items-center h-16">
+      <ul class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center h-16">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
           <a href={href}>
             <img
