@@ -43,9 +43,9 @@ function Work() {
         The WinterCG is currently working on various efforts to improve web
         platform APIs across runtimes:
       </p>
-      <ul class="mt-8 space-y-6">
+      <div class="mt-8 space-y-6">
         {work.map((item) => (
-          <li>
+          <article>
             <h2 class="text-xl font-medium">{item.name}</h2>
             <p class="text-lg">{item.description}</p>
             <p class="flex gap-4">
@@ -64,9 +64,9 @@ function Work() {
                 </a>
               )}
             </p>
-          </li>
+          </article>
         ))}
-      </ul>
+      </div>
       <Footer />
     </Layout>
   );
@@ -377,7 +377,7 @@ const PARTNER_LOGOS = [
 function Logos() {
   return (
     <div>
-      <ul class="mt-16 flex justify-evenly">
+      <div class="mt-16 flex justify-evenly">
         {RUNTIME_LOGOS.map(({ src, href, name }) => (
           <a href={href}>
             <img
@@ -388,11 +388,11 @@ function Logos() {
             />
           </a>
         ))}
-      </ul>
+      </div>
       <p class="mt-16 text-center">
         The work of the WinterCG is supported by:
       </p>
-      <ul class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center h-16">
+      <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center h-16">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
           <a href={href}>
             <img
@@ -405,7 +405,7 @@ function Logos() {
             />
           </a>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
