@@ -361,6 +361,12 @@ const PARTNER_LOGOS = [
     name: "Deno",
   },
   {
+    src: "/static/logos/igalia.png",
+    href: "https://igalia.com/",
+    name: "Igalia",
+    restrict: "horizontal",
+  },
+  {
     src: "/static/logos/shopify.svg",
     href: "https://shopify.dev/",
     name: "Shopify",
@@ -370,12 +376,6 @@ const PARTNER_LOGOS = [
     src: "/static/logos/vercel.svg",
     href: "https://vercel.com/",
     name: "Vercel",
-    restrict: "horizontal",
-  },
-  {
-    src: "/static/logos/igalia.png",
-    href: "https://igalia.com/",
-    name: "Igalia",
     restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
