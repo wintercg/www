@@ -222,6 +222,7 @@ function Faq() {
             <li>Bloomberg</li>
             <li>Cloudflare</li>
             <li>Deno</li>
+            <li>Igalia</li>
             <li>Node.js</li>
             <li>Shopify</li>
             <li>Vercel</li>
@@ -369,6 +370,12 @@ const PARTNER_LOGOS = [
     src: "/static/logos/vercel.svg",
     href: "https://vercel.com/",
     name: "Vercel",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/igalia.png",
+    href: "https://igalia.com/",
+    name: "Igalia",
     restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
