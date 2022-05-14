@@ -18,9 +18,9 @@ function Home() {
         collaborate on API interoperability. We focus on documenting and
         improving interoperability of web platform APIs across runtimes
         (especially non-browser ones). This is done through discussions among
-        runtimes, proposals for new and existing web APIs in existing
-        specification venues (WHATWG, W3C), and documentation of existing
-        runtime behaviours.{" "}
+        runtimes, proposals in specification venues (WHATWG, W3C) for new
+        web APIs and for changes to current web APIs, and documentation of
+        existing runtime behaviours.{" "}
         <a
           href="/faq"
           class="text-pink-500 hover:text-pink-700 hover:underline"
