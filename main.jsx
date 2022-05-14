@@ -14,7 +14,7 @@ function Home() {
       <Header />
       <Links />
       <p class="mt-12 text-lg text-justify">
-        This community group aims to provide a space for JS runtimes to
+        This community group aims to provide a space for JavaScript runtimes to
         collaborate on API interoperability. We focus on documenting and
         improving interoperability of web platform APIs across runtimes
         (especially non-browser ones). This is done through discussions among
