@@ -351,6 +351,11 @@ const RUNTIME_LOGOS = [
 // NOTE to all: keep this list sorted alphabetically by name.
 const PARTNER_LOGOS = [
   {
+    src: "/static/logos/bytedance.png",
+    href: "https://bytedance.com/",
+    name: "ByteDance",
+  },
+  {
     src: "/static/logos/cloudflare.svg",
     href: "https://cloudflare.com/",
     name: "Cloudflare",
