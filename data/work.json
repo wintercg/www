@@ -10,5 +10,10 @@
     "description": "A proposal to define streaming support in the Web Crypto API.",
     "repo": "proposal-webcrypto-streams",
     "specification": "https://proposal-webcrypto-streams.deno.dev"
+  },
+  {
+    "name": "Performance",
+    "description": "The performance workstream is concerned with cross environment performance measurement.",
+    "repo": "performance"
   }
 ]
