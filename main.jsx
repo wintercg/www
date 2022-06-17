@@ -18,9 +18,9 @@ function Home() {
         collaborate on API interoperability. We focus on documenting and
         improving interoperability of web platform APIs across runtimes
         (especially non-browser ones). This is done through discussions among
-        runtimes, proposals in specification venues (WHATWG, W3C) for new
-        web APIs and for changes to current web APIs, and documentation of
-        existing runtime behaviours.{" "}
+        runtimes, proposals in specification venues (WHATWG, W3C) for new web
+        APIs and for changes to current web APIs, and documentation of existing
+        runtime behaviours.{" "}
         <a
           href="/faq"
           class="text-pink-500 hover:text-pink-700 hover:underline"
@@ -354,6 +354,8 @@ const PARTNER_LOGOS = [
     src: "/static/logos/bytedance.png",
     href: "https://bytedance.com/",
     name: "ByteDance",
+    restrict: "horizontal",
+    licenseExpiration: new Date(2023, 5, 8), // We are only licensed to use the image until 2023-05-09.
   },
   {
     src: "/static/logos/cloudflare.svg",
@@ -384,7 +386,7 @@ const PARTNER_LOGOS = [
     restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
-];
+].filter(({ licenseExpiration: le }) => !le || le > new Date());
 
 function Logos() {
   return (
@@ -404,7 +406,7 @@ function Logos() {
       <p class="mt-16 text-center">
         The work of the WinterCG is supported by:
       </p>
-      <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center h-16">
+      <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
           <a href={href}>
             <img
