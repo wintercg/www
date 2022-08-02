@@ -351,6 +351,12 @@ const RUNTIME_LOGOS = [
 // NOTE to all: keep this list sorted alphabetically by name.
 const PARTNER_LOGOS = [
   {
+    src: "/static/logos/alibaba.png",
+    href: "https://alibabagroup.com/",
+    name: "Alibaba",
+    restrict: "horizontal",
+  },
+  {
     src: "/static/logos/bytedance.png",
     href: "https://bytedance.com/",
     name: "ByteDance",
