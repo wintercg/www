@@ -432,7 +432,16 @@ function Logos() {
 
 function Footer() {
   return (
-    <footer class="mt-16 text-center border-t-1 border-gray-100 p-4">
+    <footer class="mt-16 text-center border-t-1 border-gray-100 p-4 space-y-4">
+      <p>
+        <a href="https://matrix.to/#/#wintercg:matrix.org">
+          <img
+            class="h-6 inline-block"
+            src="/static/logos/matrix.svg"
+            alt="Chat with us on Matrix"
+          />
+        </a>
+      </p>
       <p class="text-sm text-gray-600">
         Copyright © WinterCG. This work is licensed under the{" "}
         <a
