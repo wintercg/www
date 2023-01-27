@@ -18,7 +18,7 @@
   },
   {
     "name": "Runtime Keys",
-    "description": "Defining standard identifier keys for runtime environments",
+    "description": "A proposal defining standard identifier keys for various runtime environments.",
     "repo": "proposal-runtime-keys"
   }
 ]
