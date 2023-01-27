@@ -15,5 +15,11 @@
     "name": "Performance",
     "description": "The performance workstream is concerned with cross environment performance measurement.",
     "repo": "performance"
+  },
+  {
+    "name": "Runtime Keys",
+    "description": "A proposal defining standard identifier keys for various runtime environments.",
+    "specification": "https://runtime-keys.proposal.wintercg.org",
+    "repo": "proposal-runtime-keys"
   }
 ]
