@@ -3,13 +3,13 @@
     "name": "Common Minimum API",
     "description": "The minimal collection of Web Platform APIs that ought to be implemented by Web-interoperable runtimes.",
     "repo": "proposal-common-minimum-api",
-    "specification": "https://proposal-common-min-api.deno.dev"
+    "specification": "https://common-min-api.proposal.wintercg.org"
   },
   {
     "name": "Web Crypto Streams",
     "description": "A proposal to define streaming support in the Web Crypto API.",
     "repo": "proposal-webcrypto-streams",
-    "specification": "https://proposal-webcrypto-streams.deno.dev"
+    "specification": "https://webcrypto-streams.proposal.wintercg.org/"
   },
   {
     "name": "Performance",
