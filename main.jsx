@@ -223,6 +223,7 @@ function Faq() {
             <li>Cloudflare</li>
             <li>Deno</li>
             <li>Igalia</li>
+            <li>Netlify</li>
             <li>Node.js</li>
             <li>Shopify</li>
             <li>Vercel</li>
@@ -377,6 +378,12 @@ const PARTNER_LOGOS = [
     src: "/static/logos/igalia.png",
     href: "https://igalia.com/",
     name: "Igalia",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/netlify.svg",
+    href: "https://netlify.com/",
+    name: "Netlify",
     restrict: "horizontal",
   },
   {
