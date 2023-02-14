@@ -21,5 +21,11 @@
     "description": "A proposal defining standard identifier keys for various runtime environments.",
     "specification": "https://runtime-keys.proposal.wintercg.org",
     "repo": "proposal-runtime-keys"
+  },
+  {
+    "name": "Fetch",
+    "description": "A fork of the WHATWG Fetch specification to make it more suitable for server-side JavaScript environments.",
+    "specification": "https://fetch.spec.wintercg.org",
+    "repo": "fetch"
   }
 ]
