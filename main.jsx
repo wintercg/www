@@ -227,6 +227,7 @@ function Faq() {
             <li>Node.js</li>
             <li>Shopify</li>
             <li>Vercel</li>
+            <li>Suborbital</li>
           </ul>
           <p>
             The group is open to anyone who also shares the interest in using
@@ -396,6 +397,12 @@ const PARTNER_LOGOS = [
     src: "/static/logos/vercel.svg",
     href: "https://vercel.com/",
     name: "Vercel",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/suborbital.svg",
+    href: "https://suborbital.dev/",
+    name: "Suborbital",
     restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
