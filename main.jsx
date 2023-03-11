@@ -222,6 +222,7 @@ function Faq() {
             <li>Bloomberg</li>
             <li>Cloudflare</li>
             <li>Deno</li>
+            <li>Fastly</li>
             <li>Igalia</li>
             <li>Netlify</li>
             <li>Node.js</li>
@@ -373,6 +374,11 @@ const PARTNER_LOGOS = [
     src: "/static/logos/deno.svg",
     href: "https://deno.com/",
     name: "Deno",
+  },
+  {
+    src: "/static/logos/fastly.svg",
+    href: "https://www.fastly.com/",
+    name: "Fastly",
   },
   {
     src: "/static/logos/igalia.png",
