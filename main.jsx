@@ -379,6 +379,7 @@ const PARTNER_LOGOS = [
     src: "/static/logos/fastly.svg",
     href: "https://www.fastly.com/",
     name: "Fastly",
+    restrict: "vertical",
   },
   {
     src: "/static/logos/igalia.png",
@@ -432,9 +433,9 @@ function Logos() {
               src={src}
               title={`${name} logo`}
               alt={`${name} logo`}
-              class={restrict === "horizontal"
-                ? "w-28 sm:w-36"
-                : "h-12 sm:h-16"}
+              class={restrict === "vertical"
+                ? "h-8 sm:h-11"
+                : (restrict === "horizontal" ? "w-28 sm:w-36" : "h-12 sm:h-16")}
             />
           </a>
         ))}
