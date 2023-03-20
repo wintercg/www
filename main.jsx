@@ -222,6 +222,7 @@ function Faq() {
             <li>Bloomberg</li>
             <li>Cloudflare</li>
             <li>Deno</li>
+            <li>Fastly</li>
             <li>Igalia</li>
             <li>Netlify</li>
             <li>Node.js</li>
@@ -375,6 +376,12 @@ const PARTNER_LOGOS = [
     name: "Deno",
   },
   {
+    src: "/static/logos/fastly.svg",
+    href: "https://www.fastly.com/",
+    name: "Fastly",
+    restrict: "vertical",
+  },
+  {
     src: "/static/logos/igalia.png",
     href: "https://igalia.com/",
     name: "Igalia",
@@ -426,9 +433,9 @@ function Logos() {
               src={src}
               title={`${name} logo`}
               alt={`${name} logo`}
-              class={restrict === "horizontal"
-                ? "w-28 sm:w-36"
-                : "h-12 sm:h-16"}
+              class={restrict === "vertical"
+                ? "h-8 sm:h-11"
+                : (restrict === "horizontal" ? "w-28 sm:w-36" : "h-12 sm:h-16")}
             />
           </a>
         ))}
