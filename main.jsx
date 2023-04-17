@@ -405,6 +405,11 @@ const PARTNER_LOGOS = [
     name: "Vercel",
     restrict: "horizontal",
   },
+  {
+    src: null,
+    href: "https://techatbloomberg.com/",
+    name: "Bloomberg",
+  },
   /** TODO: Add additional logos here */
 ].filter(({ licenseExpiration: le }) => !le || le > new Date());
 
@@ -429,14 +434,18 @@ function Logos() {
       <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
           <a href={href}>
-            <img
-              src={src}
-              title={`${name} logo`}
-              alt={`${name} logo`}
-              class={restrict === "vertical"
-                ? "h-8 sm:h-11"
-                : (restrict === "horizontal" ? "w-28 sm:w-36" : "h-12 sm:h-16")}
-            />
+            {src === null ? name : (
+              <img
+                src={src}
+                title={`${name} logo`}
+                alt={`${name} logo`}
+                class={restrict === "vertical"
+                  ? "h-8 sm:h-11"
+                  : (restrict === "horizontal"
+                    ? "w-28 sm:w-36"
+                    : "h-12 sm:h-16")}
+              />
+            )}
           </a>
         ))}
       </div>
