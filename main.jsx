@@ -329,28 +329,6 @@ function Links(props) {
 }
 
 // NOTE to all: keep this list sorted alphabetically by name.
-const RUNTIME_LOGOS = [
-  {
-    src: "/static/logos/cloudflare-workers.svg",
-    href: "https://workers.cloudflare.com/",
-    name: "Cloudflare Workers",
-  },
-  {
-    src: "/static/logos/deno.svg",
-    href: "https://deno.land/",
-    name: "Deno",
-  },
-  /**
-   * Hopefully we'll get permission to use the Node.js logo soon.
-   * {
-   *   src: "/static/logos/nodejs.svg",
-   *   href: "https://nodejs.org/",
-   *   name: "Node.js",
-   * },
-   */
-];
-
-// NOTE to all: keep this list sorted alphabetically by name.
 const PARTNER_LOGOS = [
   {
     src: "/static/logos/alibaba.png",
@@ -416,18 +394,6 @@ const PARTNER_LOGOS = [
 function Logos() {
   return (
     <div>
-      <div class="mt-16 flex justify-evenly">
-        {RUNTIME_LOGOS.map(({ src, href, name }) => (
-          <a href={href}>
-            <img
-              src={src}
-              title={`${name} logo`}
-              alt={`${name} logo`}
-              class="h-16 sm:h-20"
-            />
-          </a>
-        ))}
-      </div>
       <p class="mt-16 text-center">
         The work of the WinterCG is supported by:
       </p>
