@@ -222,6 +222,7 @@ function Faq() {
             <li>Bloomberg</li>
             <li>Cloudflare</li>
             <li>Deno</li>
+            <li>Fastly</li>
             <li>Igalia</li>
             <li>Netlify</li>
             <li>Node.js</li>
@@ -329,28 +330,6 @@ function Links(props) {
 }
 
 // NOTE to all: keep this list sorted alphabetically by name.
-const RUNTIME_LOGOS = [
-  {
-    src: "/static/logos/cloudflare-workers.svg",
-    href: "https://workers.cloudflare.com/",
-    name: "Cloudflare Workers",
-  },
-  {
-    src: "/static/logos/deno.svg",
-    href: "https://deno.land/",
-    name: "Deno",
-  },
-  /**
-   * Hopefully we'll get permission to use the Node.js logo soon.
-   * {
-   *   src: "/static/logos/nodejs.svg",
-   *   href: "https://nodejs.org/",
-   *   name: "Node.js",
-   * },
-   */
-];
-
-// NOTE to all: keep this list sorted alphabetically by name.
 const PARTNER_LOGOS = [
   {
     src: "/static/logos/alibaba.png",
@@ -359,11 +338,16 @@ const PARTNER_LOGOS = [
     restrict: "horizontal",
   },
   {
+    src: null,
+    href: "https://techatbloomberg.com/",
+    name: "Bloomberg",
+  },
+  {
     src: "/static/logos/bytedance.png",
     href: "https://bytedance.com/",
     name: "ByteDance",
     restrict: "horizontal",
-    licenseExpiration: new Date(2023, 5, 8), // We are only licensed to use the image until 2023-05-09.
+    licenseExpiration: new Date(2026, 6, 28), // We are only licensed to use the image until 2026-06-29.
   },
   {
     src: "/static/logos/cloudflare.svg",
@@ -374,6 +358,12 @@ const PARTNER_LOGOS = [
     src: "/static/logos/deno.svg",
     href: "https://deno.com/",
     name: "Deno",
+  },
+  {
+    src: "/static/logos/fastly.svg",
+    href: "https://www.fastly.com/",
+    name: "Fastly",
+    restrict: "vertical",
   },
   {
     src: "/static/logos/igalia.png",
@@ -394,15 +384,15 @@ const PARTNER_LOGOS = [
     restrict: "horizontal",
   },
   {
-    src: "/static/logos/vercel.svg",
-    href: "https://vercel.com/",
-    name: "Vercel",
-    restrict: "horizontal",
-  },
-  {
     src: "/static/logos/suborbital.svg",
     href: "https://suborbital.dev/",
     name: "Suborbital",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/vercel.svg",
+    href: "https://vercel.com/",
+    name: "Vercel",
     restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
@@ -411,32 +401,24 @@ const PARTNER_LOGOS = [
 function Logos() {
   return (
     <div>
-      <div class="mt-16 flex justify-evenly">
-        {RUNTIME_LOGOS.map(({ src, href, name }) => (
-          <a href={href}>
-            <img
-              src={src}
-              title={`${name} logo`}
-              alt={`${name} logo`}
-              class="h-16 sm:h-20"
-            />
-          </a>
-        ))}
-      </div>
       <p class="mt-16 text-center">
         The work of the WinterCG is supported by:
       </p>
       <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
           <a href={href}>
-            <img
-              src={src}
-              title={`${name} logo`}
-              alt={`${name} logo`}
-              class={restrict === "horizontal"
-                ? "w-28 sm:w-36"
-                : "h-12 sm:h-16"}
-            />
+            {src === null ? name : (
+              <img
+                src={src}
+                title={`${name} logo`}
+                alt={`${name} logo`}
+                class={restrict === "vertical"
+                  ? "h-8 sm:h-11"
+                  : (restrict === "horizontal"
+                    ? "w-28 sm:w-36"
+                    : "h-12 sm:h-16")}
+              />
+            )}
           </a>
         ))}
       </div>
