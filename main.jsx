@@ -363,7 +363,7 @@ const PARTNER_LOGOS = [
     href: "https://bytedance.com/",
     name: "ByteDance",
     restrict: "horizontal",
-    licenseExpiration: new Date(2023, 5, 8), // We are only licensed to use the image until 2023-05-09.
+    licenseExpiration: new Date(2026, 6, 28), // We are only licensed to use the image until 2026-06-29.
   },
   {
     src: "/static/logos/cloudflare.svg",
