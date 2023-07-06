@@ -1,0 +1,9 @@
+{
+  "scopes": {
+    "https://crux.land/api/get/7GrKMy.ts": {
+      // fix the import path for twind inside nanossr
+      "twind": "https://esm.sh/twind@0.16.16/shim/server",
+      "https://esm.sh/@twind/typography@0.0.2": "https://esm.sh/*@twind/typography@0.0.2"
+    }
+  }
+}
