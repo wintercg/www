@@ -134,8 +134,9 @@ function Faq() {
           </p>
           <p>
             We want to coordinate and propose updates to existing Web Platform
-            APIs (in existing venues) that we think would benefit the goal of a
-            comprehensive unified API surface for all JS developers.
+            APIs (in existing venues) and incubate new ideas that we think
+            would benefit the goal of a comprehensive unified API surface for
+            all JS developers.
           </p>
         </div>
         <div class="space-y-4">
@@ -174,12 +175,12 @@ function Faq() {
             <h2 class="text-2xl font-medium">What are we NOT trying to do?</h2>
           </a>
           <p>
-            We are not trying to be a specification body that specifies new
-            APIs. We want to work with members of existing specification bodies
-            to improve existing APIs.
+            We are not trying to be a specification body. We want to work with
+            members of existing specification bodies to improve existing APIs
+            and incubate new ideas that could one day become standards.
           </p>
           <p>
-            We will never fork or create new versions of existing
+            We will never publish a fork or new versions of existing
             specifications. For any change we propose, the goal is always for it
             to be incorporated into an upstream spec in an existing venue (such
             as WHATWG or W3C).
