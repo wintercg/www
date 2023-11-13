@@ -403,7 +403,7 @@ function Logos() {
   return (
     <div>
       <p class="mt-16 text-center">
-        The work of the WinterCG is supported by:
+        The WinterCG includes participants from:
       </p>
       <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
