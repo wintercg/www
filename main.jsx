@@ -203,7 +203,7 @@ function Faq() {
             given work product make the judgement on whether a change is ready
             for inclusion and has enough support from the group. The group
             itself has a strict consensus policy outlined in the charter, which
-            is oversought by the group chairs.
+            is overseen by the group chairs.
           </p>
         </div>
         <div class="space-y-4">
