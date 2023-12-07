@@ -379,6 +379,12 @@ const PARTNER_LOGOS = [
     restrict: "horizontal",
   },
   {
+    src: "/static/logos/nodejs.svg",
+    href: "https://nodejs.org",
+    name: "Node.js",
+    restrict: "horizontal",
+  },
+  {
     src: "/static/logos/shopify.svg",
     href: "https://shopify.dev/",
     name: "Shopify",
