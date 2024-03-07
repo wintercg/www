@@ -33,5 +33,10 @@
     "description": "A proposal incubating an API for establishing TCP connections in non-browser JavaScript environments.",
     "specification": "https://sockets-api.proposal.wintercg.org",
     "repo": "proposal-sockets-api"
+  },
+  {
+    "name": "CLI API",
+    "description": "A proposal standardizing common CLI APIs such as argv and environment variables.",
+    "repo": "proposal-cli-api"
   }
 ]
