@@ -220,6 +220,7 @@ function Faq() {
             the following organizations:
           </p>
           <ul class="list-disc pl-7">
+            <li>Azion</li>
             <li>Bloomberg</li>
             <li>Cloudflare</li>
             <li>Deno</li>
@@ -400,6 +401,12 @@ const PARTNER_LOGOS = [
     src: "/static/logos/vercel.svg",
     href: "https://vercel.com/",
     name: "Vercel",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/azion.svg",
+    href: "https://azion.com/",
+    name: "Azion",
     restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
