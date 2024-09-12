@@ -1,9 +1,9 @@
 [
   {
-    "name": "Common Minimum API",
+    "name": "Minimum Common API",
     "description": "The minimal collection of Web Platform APIs that ought to be implemented by Web-interoperable runtimes.",
-    "repo": "proposal-common-minimum-api",
-    "specification": "https://common-min-api.proposal.wintercg.org"
+    "repo": "proposal-minimum-common-api",
+    "specification": "https://min-common-api.proposal.wintercg.org"
   },
   {
     "name": "Web Crypto Streams",
