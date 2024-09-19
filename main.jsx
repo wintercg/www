@@ -17,7 +17,7 @@ function Home() {
         This community group aims to provide a space for JavaScript runtimes to
         collaborate on API interoperability. We focus on documenting and
         improving interoperability of web platform APIs across runtimes
-        (especially non-browser ones). This is done through discussions among
+        (especially server-side ones). This is done through discussions among
         runtimes, proposals in specification venues (WHATWG, W3C) for new web
         APIs and for changes to current web APIs, and documentation of existing
         runtime behaviours.{" "}
@@ -175,15 +175,14 @@ function Faq() {
             <h2 class="text-2xl font-medium">What are we NOT trying to do?</h2>
           </a>
           <p>
-            We are not trying to be a specification body. We want to work with
-            members of existing specification bodies to improve existing APIs
-            and incubate new ideas that could one day become standards.
-          </p>
-          <p>
-            We will never publish a fork or new versions of existing
-            specifications. For any change we propose, the goal is always for it
-            to be incorporated into an upstream spec in an existing venue (such
-            as WHATWG or W3C).
+            We do not want to permanently fork or create new versions of
+            existing specifications. For any change we propose, the goal is
+            always for it to be incorporated into an upstream spec in an
+            existing venue (such as WHATWG or W3C). We may maintain temporary
+            forks of existing specs to experiment or incubate ideas before
+            proposing them upstream - but the goal is always to propose changes
+            to the upstream spec. A temporary fork would thus never be
+            published as a specification.
           </p>
           <p>
             We are not trying to shift the focus of Web Platform APIs to only
