@@ -1,9 +1,9 @@
 [
   {
     "name": "Minimum Common API",
-    "description": "The minimal collection of Web Platform APIs that ought to be implemented by Web-interoperable runtimes.",
+    "description": "The minimum collection of Web Platform APIs that ought to be implemented by Web-interoperable runtimes.",
     "repo": "proposal-minimum-common-api",
-    "specification": "https://common-min-api.proposal.wintercg.org"
+    "specification": "https://min-common-api.proposal.wintercg.org"
   },
   {
     "name": "Web Crypto Streams",
@@ -24,8 +24,7 @@
   },
   {
     "name": "Fetch",
-    "description": "A fork of the WHATWG Fetch to make the upstream specification more suitable for server-side JavaScript environments.",
-    "specification": "https://fetch.spec.wintercg.org",
+    "description": "Changes to the WHATWG Fetch to make the upstream specification more suitable for server-side JavaScript environments.",
     "repo": "fetch"
   },
   {
