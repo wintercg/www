@@ -199,14 +199,19 @@ function Faq() {
             <h2 class="text-2xl font-medium">What are we NOT trying to do?</h2>
           </a>
           <p>
-            We do not want to permanently fork or create new versions of
-            existing specifications. For any change we propose, the goal is
-            always for it to be incorporated into an upstream spec in an
-            existing venue (such as WHATWG or W3C). We may maintain temporary
-            forks of existing specs to experiment or incubate ideas before
-            proposing them upstream - but the goal is always to propose changes
-            to the upstream spec. A temporary fork would thus never be published
-            as a specification.
+            We do not want to fork or create new versions of existing
+            specifications. If we think a new web platform API is needed, or if
+            we think an existing spec needs changes, the goal is always for that
+            change or addition to be developed in an existing venue (such as
+            WHATWG or W3C).
+          </p>
+          <p>
+            We do not want to create new server-side APIs that overlap with
+            existing web platform APIs. If there is a proposed or standardized
+            web API that overlaps with the needs of server-side runtimes, the
+            goal is always to investigate what changes (if any) it would need to
+            be useful for servers, and to eventually add it to the minimum
+            common API.
           </p>
           <p>
             We are not trying to shift the focus of Web Platform APIs to only
@@ -343,11 +348,10 @@ function Links(props) {
         <li>
           <a
             href={props.selected === link.href ? undefined : link.href}
-            class={`block border-4 ${
-              props.selected === link.href
+            class={`block border-4 ${props.selected === link.href
                 ? "bg-pink-200 text-black border-pink-300"
                 : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
-            } sm:p-2 md:p-3 font-medium text-lg text-center`}
+              } sm:p-2 md:p-3 font-medium text-lg text-center`}
           >
             {link.name}
           </a>
