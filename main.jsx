@@ -348,10 +348,11 @@ function Links(props) {
         <li>
           <a
             href={props.selected === link.href ? undefined : link.href}
-            class={`block border-4 ${props.selected === link.href
+            class={`block border-4 ${
+              props.selected === link.href
                 ? "bg-pink-200 text-black border-pink-300"
                 : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
-              } sm:p-2 md:p-3 font-medium text-lg text-center`}
+            } sm:p-2 md:p-3 font-medium text-lg text-center`}
           >
             {link.name}
           </a>
