@@ -21,13 +21,13 @@
   "collaborations": [
     {
       "name": "Fetch",
-      "description": "We are working together with the WHATWG to make the fetch specification more suitable for server-side JavaScript environments.",
+      "description": "We are gathering requirements to make the fetch specification more suitable for server-side JavaScript environments, with improvements to be developed in WHATWG.",
       "repo": "whatwg/fetch",
       "specification": "https://fetch.spec.whatwg.org"
     },
     {
       "name": "Web Crypto Streams",
-      "description": "We are working together with the WICG and Web Application Security Working Group to define streaming support in the Web Crypto API.",
+      "description": "We are gathering requirements in order to define streaming support in the Web Crypto API, with improvements to be developed in the WICG and the Web Application Security Working Group.",
       "repo": "wintercg/proposal-webcrypto-streams"
     }
   ]

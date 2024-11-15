@@ -103,7 +103,7 @@ function Faq() {
             The Web-interoperable Runtimes Community Group (WinterCG) is a
             community of people who are interested in interoperability across
             server-side (Deno / Node.js) or edge JavaScript runtimes (Cloudflare
-            Workers / Deno), especially for Web Platform APIs.
+            Workers / Deno Deploy), especially for Web Platform APIs.
           </p>
           <p>
             The WinterCG is organized as a W3C Community Group. This gives the
@@ -121,8 +121,8 @@ function Faq() {
           <p>
             The ultimate goal of the group is to promote runtimes supporting a
             comprehensive unified API surface that JavaScript developers can
-            rely on regardless of the runtime they are using: be it browsers,
-            servers, embedded applications, or edge runtimes.
+            rely on, regardless of whether their code will be used in browsers,
+            servers, or edge runtimes.
           </p>
           <p>
             But since different types of runtimes have different needs, we also
@@ -134,6 +134,12 @@ function Faq() {
             The members of the group want to provide a space to better
             coordinate between server-side implementors, as well as with browser
             vendors, on how to best achieve this interoperability.
+          </p>
+          <p>
+            Our goal does not include promoting such a unified API surface for
+            other JavaScript environments, such as embedded applications.
+            However, the results of our work could be useful to such
+            environments nonetheless.
           </p>
         </div>
         <div class="space-y-4">
@@ -203,20 +209,24 @@ function Faq() {
             specifications. If we think a new web platform API is needed, or if
             we think an existing spec needs changes, the goal is always for that
             change or addition to be developed in an existing venue (such as
-            WHATWG or W3C).
+            WHATWG or W3C). WinterCG will publish requirements on what those
+            changes should be, and it will be up to that existing standards body
+            to make the changes, possibly through members who are part of both
+            WinterCG and that standards body.
           </p>
           <p>
             We do not want to create new server-side APIs that overlap with
             existing web platform APIs. If there is a proposed or standardized
             web API that overlaps with the needs of server-side runtimes, the
             goal is always to investigate what changes (if any) it would need to
-            be useful for servers, and to eventually add it to the minimum
-            common API.
+            be useful for servers; and once those changes have been incorporated
+            to the specification, to eventually add the API to the minimum
+            common set.
           </p>
           <p>
             We are not trying to shift the focus of Web Platform APIs to only
-            serve non-browser runtimes. We want to see more API surface that is
-            useful and works great both in browsers and in other runtimes.
+            serve server-side runtimes. We want to see more API surface that is
+            useful and works great both in browsers and in the server.
           </p>
         </div>
         <div class="space-y-4">
@@ -348,11 +358,10 @@ function Links(props) {
         <li>
           <a
             href={props.selected === link.href ? undefined : link.href}
-            class={`block border-4 ${
-              props.selected === link.href
-                ? "bg-pink-200 text-black border-pink-300"
-                : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
-            } sm:p-2 md:p-3 font-medium text-lg text-center`}
+            class={`block border-4 ${props.selected === link.href
+              ? "bg-pink-200 text-black border-pink-300"
+              : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
+              } sm:p-2 md:p-3 font-medium text-lg text-center`}
           >
             {link.name}
           </a>
