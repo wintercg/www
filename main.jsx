@@ -6,7 +6,7 @@ import { serve } from "https://deno.land/std@0.135.0/http/server.ts";
 import { serveDir } from "https://deno.land/std@0.135.0/http/file_server.ts";
 import { Fragment, h, Helmet, ssr } from "https://crux.land/nanossr@0.0.4";
 
-import work from "./data/work.json" assert { type: "json" };
+import work from "./data/work.json" with { type: "json" };
 
 function Home() {
   return (
@@ -14,13 +14,19 @@ function Home() {
       <Header />
       <Links />
       <p class="mt-12 text-lg text-justify">
-        This community group aims to provide a space for JavaScript runtimes to
-        collaborate on API interoperability. We focus on documenting and
-        improving interoperability of web platform APIs across runtimes
-        (especially server-side ones). This is done through discussions among
-        runtimes, proposals in specification venues (WHATWG, W3C) for new web
-        APIs and for changes to current web APIs, and documentation of existing
-        runtime behaviours.{" "}
+        WinterCG is a W3C community group that aims to achieve some level of API
+        interoperability across server-side JavaScript runtimes, especially for
+        APIs that are common with the web. This is done by working on a{" "}
+        <a
+          href="https://min-common-api.proposal.wintercg.org"
+          class="text-pink-500 hover:text-pink-700 hover:underline"
+        >
+          “minimum common API”
+        </a>{" "}
+        of web APIs that such runtimes should support, as well as by
+        collaborating with web standards groups (WHATWG, W3C...) for new web
+        APIs and changes to current web APIs. We also work on proposals to add
+        new interoperable server-side APIs.{" "}
         <a
           href="/faq"
           class="text-pink-500 hover:text-pink-700 hover:underline"
@@ -34,39 +40,50 @@ function Home() {
   );
 }
 
+function WorkItems(props) {
+  return (
+    <div class="mt-8 space-y-6">
+      {props.items.map((item) => (
+        <article>
+          <h2 class="text-xl font-medium">{item.name}</h2>
+          <p class="text-lg">{item.description}</p>
+          <p class="flex gap-4">
+            <a
+              href={`https://github.com/${props.repoPrefix ?? ""}${item.repo}`}
+              class="text-pink-500 hover:text-pink-700 hover:underline"
+            >
+              Repository
+            </a>
+            {item.specification && (
+              <a
+                href={item.specification}
+                class="text-pink-500 hover:text-pink-700 hover:underline"
+              >
+                Specification
+              </a>
+            )}
+          </p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 function Work() {
   return (
     <Layout>
       <Header />
       <Links selected="/work" />
       <p class="mt-12 text-lg">
-        The WinterCG is currently working on various efforts to improve web
-        platform APIs across runtimes:
+        The WinterCG is currently working on various efforts to improve
+        interoperability across server-side runtimes:
       </p>
-      <div class="mt-8 space-y-6">
-        {work.map((item) => (
-          <article>
-            <h2 class="text-xl font-medium">{item.name}</h2>
-            <p class="text-lg">{item.description}</p>
-            <p class="flex gap-4">
-              <a
-                href={`https://github.com/wintercg/${item.repo}`}
-                class="text-pink-500 hover:text-pink-700 hover:underline"
-              >
-                Repository
-              </a>
-              {item.specification && (
-                <a
-                  href={item.specification}
-                  class="text-pink-500 hover:text-pink-700 hover:underline"
-                >
-                  Specification
-                </a>
-              )}
-            </p>
-          </article>
-        ))}
-      </div>
+      <WorkItems items={work.specs} repoPrefix="wintercg/" />
+      <p class="mt-12 text-lg">
+        We are also collaborating with other standards bodies to make web
+        platform APIs more suitable to server-side runtimes:
+      </p>
+      <WorkItems items={work.collaborations} />
       <Footer />
     </Layout>
   );
@@ -79,14 +96,14 @@ function Faq() {
       <Links selected="/faq" />
       <section class="mt-12 text-lg space-y-10">
         <div class="space-y-4">
-          <a href="#who-is-the-wintercg" id="what-is-the-wintercg">
+          <a href="#what-is-the-wintercg" id="what-is-the-wintercg">
             <h2 class="text-2xl font-medium">What is the WinterCG?</h2>
           </a>
           <p>
             The Web-interoperable Runtimes Community Group (WinterCG) is a
-            community of people who are interested in using Web Platform APIs
-            outside of browsers, namely on the server (Deno / Node.js) or edge
-            runtimes (Cloudflare Workers / Deno).
+            community of people who are interested in interoperability across
+            server-side (Deno / Node.js) or edge JavaScript runtimes (Cloudflare
+            Workers / Deno), especially for Web Platform APIs.
           </p>
           <p>
             The WinterCG is organized as a W3C Community Group. This gives the
@@ -108,9 +125,15 @@ function Faq() {
             servers, embedded applications, or edge runtimes.
           </p>
           <p>
+            But since different types of runtimes have different needs, we also
+            have the goal of supporting certain unified API surfaces for
+            runtimes with similar needs, such as APIs that are useful to servers
+            and edge runtimes, but not to browsers.
+          </p>
+          <p>
             The members of the group want to provide a space to better
-            coordinate between browser vendors and other implementors on how Web
-            Platform APIs can be best implemented and used outside of browsers.
+            coordinate between server-side implementors, as well as with browser
+            vendors, on how to best achieve this interoperability.
           </p>
         </div>
         <div class="space-y-4">
@@ -130,13 +153,14 @@ function Faq() {
           <p>
             We want to provide feedback to spec authors of Web Platform APIs
             from the view point of non-browser runtimes to help them make
-            informed decisions about future specification changes.
+            informed decisions about future changes and additions to the
+            specifications.
           </p>
           <p>
-            We want to coordinate and propose updates to existing Web Platform
-            APIs (in existing venues) and incubate new ideas that we think
-            would benefit the goal of a comprehensive unified API surface for
-            all JS developers.
+            We want to develop and incubate new APIs that, although they might
+            be too powerful for the Web Platform or not fit its security model,
+            would still be a great fit for server-side runtimes and would be
+            part of a comprehensive unified API surface for such runtimes.
           </p>
         </div>
         <div class="space-y-4">
@@ -181,8 +205,8 @@ function Faq() {
             existing venue (such as WHATWG or W3C). We may maintain temporary
             forks of existing specs to experiment or incubate ideas before
             proposing them upstream - but the goal is always to propose changes
-            to the upstream spec. A temporary fork would thus never be
-            published as a specification.
+            to the upstream spec. A temporary fork would thus never be published
+            as a specification.
           </p>
           <p>
             We are not trying to shift the focus of Web Platform APIs to only
@@ -191,7 +215,10 @@ function Faq() {
           </p>
         </div>
         <div class="space-y-4">
-          <a href="#who-controls-the-wintercg" id="who-controls-the-wintercg">
+          <a
+            href="#does-the-wintercg-operate-by-consensus"
+            id="does-the-wintercg-operate-by-consensus"
+          >
             <h2 class="text-2xl font-medium">
               Does the WinterCG operate by consensus?
             </h2>
