@@ -1,41 +1,34 @@
-[
-  {
-    "name": "Minimum Common API",
-    "description": "The minimum collection of Web Platform APIs that ought to be implemented by Web-interoperable runtimes.",
-    "repo": "proposal-minimum-common-api",
-    "specification": "https://min-common-api.proposal.wintercg.org"
-  },
-  {
-    "name": "Web Crypto Streams",
-    "description": "A proposal to define streaming support in the Web Crypto API.",
-    "repo": "proposal-webcrypto-streams",
-    "specification": "https://webcrypto-streams.proposal.wintercg.org/"
-  },
-  {
-    "name": "Performance",
-    "description": "The performance workstream is concerned with cross environment performance measurement.",
-    "repo": "performance"
-  },
-  {
-    "name": "Runtime Keys",
-    "description": "A proposal defining standard identifier keys for various runtime environments.",
-    "specification": "https://runtime-keys.proposal.wintercg.org",
-    "repo": "proposal-runtime-keys"
-  },
-  {
-    "name": "Fetch",
-    "description": "Changes to the WHATWG Fetch to make the upstream specification more suitable for server-side JavaScript environments.",
-    "repo": "fetch"
-  },
-  {
-    "name": "Sockets API",
-    "description": "A proposal incubating an API for establishing TCP connections in non-browser JavaScript environments.",
-    "specification": "https://sockets-api.proposal.wintercg.org",
-    "repo": "proposal-sockets-api"
-  },
-  {
-    "name": "CLI API",
-    "description": "A proposal standardizing common CLI APIs such as argv and environment variables.",
-    "repo": "proposal-cli-api"
-  }
-]
+{
+  "specs": [
+    {
+      "name": "Minimum Common API",
+      "description": "The minimal collection of Web Platform APIs that ought to be implemented by Web-interoperable runtimes.",
+      "repo": "proposal-minimum-common-api",
+      "specification": "https://min-common-api.proposal.wintercg.org"
+    },
+    {
+      "name": "Sockets API",
+      "description": "A proposal incubating an API for establishing TCP connections in non-browser JavaScript environments.",
+      "repo": "proposal-sockets-api",
+      "specification": "https://sockets-api.proposal.wintercg.org"
+    },
+    {
+      "name": "CLI API",
+      "description": "A proposal standardizing common CLI APIs such as argv and environment variables.",
+      "repo": "proposal-cli-api"
+    }
+  ],
+  "collaborations": [
+    {
+      "name": "Fetch",
+      "description": "We are gathering requirements to make the fetch specification more suitable for server-side JavaScript environments, with improvements to be developed in WHATWG.",
+      "repo": "whatwg/fetch",
+      "specification": "https://fetch.spec.whatwg.org"
+    },
+    {
+      "name": "Web Crypto Streams",
+      "description": "We are gathering requirements in order to define streaming support in the Web Crypto API, with improvements to be developed in the WICG and the Web Application Security Working Group.",
+      "repo": "wintercg/proposal-webcrypto-streams"
+    }
+  ]
+}
