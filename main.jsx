@@ -159,12 +159,12 @@ function Faq() {
           <p>
             We want to provide feedback to spec authors of Web Platform APIs
             from the view point of non-browser runtimes to help them make
-            informed decisions about future changes and additions to the
+            informed decisions about future changes and additions to these
             specifications.
           </p>
           <p>
             We want to develop and incubate new APIs that, although they might
-            be too powerful for the Web Platform or not fit its security model,
+            be too powerful for the Web Platform or not fit within its security model,
             would still be a great fit for server-side runtimes and would be
             part of a comprehensive unified API surface for such runtimes.
           </p>
@@ -226,7 +226,7 @@ function Faq() {
           <p>
             We are not trying to shift the focus of Web Platform APIs to only
             serve server-side runtimes. We want to see more API surface that is
-            useful and works great both in browsers and in the server.
+            useful and works great both in browsers and on the server.
           </p>
         </div>
         <div class="space-y-4">
