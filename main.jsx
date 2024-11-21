@@ -125,10 +125,9 @@ function Faq() {
             servers, or edge runtimes.
           </p>
           <p>
-            But since different types of runtimes have different needs, we also
-            have the goal of supporting certain unified API surfaces for
-            runtimes with similar needs, such as APIs that are useful to servers
-            and edge runtimes, but not to browsers.
+            It is another goal of WinterCG that runtimes with needs for
+            capabilities beyond web platform APIs, in particular server-side and
+            edge runtimes, still have unified surfaces.
           </p>
           <p>
             The members of the group want to provide a space to better
@@ -136,10 +135,10 @@ function Faq() {
             vendors, on how to best achieve this interoperability.
           </p>
           <p>
-            Our goal does not include promoting such a unified API surface for
-            other JavaScript environments, such as embedded applications.
-            However, the results of our work could be useful to such
-            environments nonetheless.
+            It is not explicitly a goal of WinterCG to promote such a unified
+            API surface for other JavaScript environments, such as embedded
+            applications. However, the results of our work could be useful to
+            such environments nonetheless.
           </p>
         </div>
         <div class="space-y-4">
@@ -164,9 +163,9 @@ function Faq() {
           </p>
           <p>
             We want to develop and incubate new APIs that, although they might
-            be too powerful for the Web Platform or not fit within its security model,
-            would still be a great fit for server-side runtimes and would be
-            part of a comprehensive unified API surface for such runtimes.
+            be too powerful for the Web Platform or not fit within its security
+            model, would still be a great fit for server-side runtimes and would
+            be part of a comprehensive unified API surface for such runtimes.
           </p>
         </div>
         <div class="space-y-4">
@@ -210,8 +209,8 @@ function Faq() {
             we think an existing spec needs changes, the goal is always for that
             change or addition to be developed in an existing venue (such as
             WHATWG or W3C). WinterCG will publish requirements on what those
-            changes should be, and it will be up to that existing standards body
-            to make the changes, possibly through members who are part of both
+            changes could be, and it will be up to that existing standards body
+            to make these changes, possibly through members who are part of both
             WinterCG and that standards body.
           </p>
           <p>
@@ -358,10 +357,11 @@ function Links(props) {
         <li>
           <a
             href={props.selected === link.href ? undefined : link.href}
-            class={`block border-4 ${props.selected === link.href
-              ? "bg-pink-200 text-black border-pink-300"
-              : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
-              } sm:p-2 md:p-3 font-medium text-lg text-center`}
+            class={`block border-4 ${
+              props.selected === link.href
+                ? "bg-pink-200 text-black border-pink-300"
+                : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
+            } sm:p-2 md:p-3 font-medium text-lg text-center`}
           >
             {link.name}
           </a>
