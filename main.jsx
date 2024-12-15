@@ -14,18 +14,19 @@ function Home() {
       <Header />
       <Links />
       <p class="mt-12 text-lg text-justify">
-        WinterCG is a W3C community group that aims to achieve some level of API
-        interoperability across server-side JavaScript runtimes, especially for
-        APIs that are common with the web. This is done by working on a{" "}
+        WinterTC (TC55) is an Ecma International Technical Committee that aims
+        to achieve some level of API interoperability across server-side
+        JavaScript runtimes, especially for APIs that are common with the web.
+        This is done by specifying a{" "}
         <a
           href="https://min-common-api.proposal.wintercg.org"
           class="text-pink-500 hover:text-pink-700 hover:underline"
         >
           “minimum common API”
         </a>{" "}
-        of web APIs that such runtimes should support, as well as by
+        shared with the web that such runtimes should support, as well as by
         collaborating with web standards groups (WHATWG, W3C...) for new web
-        APIs and changes to current web APIs. We also work on proposals to add
+        APIs and changes to current web APIs. We also publish standards to add
         new interoperable server-side APIs.{" "}
         <a
           href="/faq"
@@ -75,7 +76,7 @@ function Work() {
       <Header />
       <Links selected="/work" />
       <p class="mt-12 text-lg">
-        The WinterCG is currently working on various efforts to improve
+        The WinterTG is currently working on various standards to improve
         interoperability across server-side runtimes:
       </p>
       <WorkItems items={work.specs} repoPrefix="wintercg/" />
@@ -96,20 +97,33 @@ function Faq() {
       <Links selected="/faq" />
       <section class="mt-12 text-lg space-y-10">
         <div class="space-y-4">
-          <a href="#what-is-the-wintercg" id="what-is-the-wintercg">
-            <h2 class="text-2xl font-medium">What is the WinterCG?</h2>
+          <div id="what-is-the-wintercg"></div>
+          <a href="#what-is-the-wintertc" id="what-is-the-wintertc">
+            <h2 class="text-2xl font-medium">What is the WinterTC?</h2>
           </a>
           <p>
-            The Web-interoperable Runtimes Community Group (WinterCG) is a
-            community of people who are interested in interoperability across
+            The Technical Committee on Web-interoperable Runtimes (WinterTC) is
+            a community of people who are interested in interoperability across
             server-side (Deno / Node.js) or edge JavaScript runtimes (Cloudflare
             Workers / Deno Deploy), especially for Web Platform APIs.
           </p>
           <p>
-            The WinterCG is organized as a W3C Community Group. This gives the
-            group access to the W3C's vast infrastructure and its IPR policy
-            work. This is the same type of community that the WICG is organized
-            in.
+            The WinterTC is organized as{" "}
+            <a
+              href="https://www.ecma-international.org/"
+              class="text-pink-500 hover:text-pink-700 hover:underline"
+            >
+              Ecma International
+            </a>'s Technical Committee number 55 (TC55). This gives the group
+            access to Ecma's vast infrastructure and its IPR policy work, as
+            well as the ability to publish standards. This is the same type of
+            committee as{" "}
+            <a
+              href="https://tc39.es/"
+              class="text-pink-500 hover:text-pink-700 hover:underline"
+            >
+              TC39
+            </a>, which standardizes the JavaScript language.
           </p>
         </div>
         <div class="space-y-4">
@@ -119,23 +133,23 @@ function Faq() {
             </h2>
           </a>
           <p>
-            The ultimate goal of the group is to promote runtimes supporting a
-            comprehensive unified API surface that JavaScript developers can
-            rely on, regardless of whether their code will be used in browsers,
-            servers, or edge runtimes.
+            The ultimate goal of this committee is to promote runtimes
+            supporting a comprehensive unified API surface that JavaScript
+            developers can rely on, regardless of whether their code will be
+            used in browsers, servers, or edge runtimes.
           </p>
           <p>
-            It is another goal of WinterCG that runtimes with needs for
+            It is another goal of WinterTC that runtimes with needs for
             capabilities beyond web platform APIs, in particular server-side and
             edge runtimes, still have unified surfaces.
           </p>
           <p>
-            The members of the group want to provide a space to better
+            The members of the committee want to provide a space to better
             coordinate between server-side implementors, as well as with browser
             vendors, on how to best achieve this interoperability.
           </p>
           <p>
-            It is not explicitly a goal of WinterCG to promote such a unified
+            It is not explicitly a goal of WinterTC to promote such a unified
             API surface for other JavaScript environments, such as embedded
             applications. However, the results of our work could be useful to
             such environments nonetheless.
@@ -151,9 +165,9 @@ function Faq() {
             </h2>
           </a>
           <p>
-            We want to provide guidance and documentation on how server side
-            runtimes can best implement Web Platform APIs and to what extent
-            they could deviate from browsers.
+            We want to specify and document how server side runtimes can best
+            implement Web Platform APIs and to what extent they could deviate
+            from browsers.
           </p>
           <p>
             We want to provide feedback to spec authors of Web Platform APIs
@@ -162,8 +176,8 @@ function Faq() {
             specifications.
           </p>
           <p>
-            We want to develop and incubate new APIs that, although they might
-            be too powerful for the Web Platform or not fit within its security
+            We want to develop and specify new APIs that, although they might be
+            too powerful for the Web Platform or not fit within its security
             model, would still be a great fit for server-side runtimes and would
             be part of a comprehensive unified API surface for such runtimes.
           </p>
@@ -208,10 +222,10 @@ function Faq() {
             specifications. If we think a new web platform API is needed, or if
             we think an existing spec needs changes, the goal is always for that
             change or addition to be developed in an existing venue (such as
-            WHATWG or W3C). WinterCG will publish requirements on what those
+            WHATWG or W3C). WinterTC will publish requirements on what those
             changes could be, and it will be up to that existing standards body
             to make these changes, possibly through members who are part of both
-            WinterCG and that standards body.
+            WinterTC and that standards body.
           </p>
           <p>
             We do not want to create new server-side APIs that overlap with
@@ -230,14 +244,49 @@ function Faq() {
         </div>
         <div class="space-y-4">
           <a
-            href="#does-the-wintercg-operate-by-consensus"
-            id="does-the-wintercg-operate-by-consensus"
+            href="#is-this-the-same-as-the-wintercg"
+            id="is-this-the-same-as-the-wintercg"
           >
             <h2 class="text-2xl font-medium">
-              Does the WinterCG operate by consensus?
+              Is this the same as the “WinterCG”?
             </h2>
           </a>
           <p>
+            We initially started our work of working on this cross-runtime
+            interoperability in May 2022 by creating the Web-interoperable
+            Runtimes Community Group (nicknamed WinterCG) under the W3C. We
+            chose to organize it as a W3C Community Group because it was open
+            for anyone to participate, without needing to be a W3C member.
+          </p>
+          <p>
+            However, W3C Community Groups are not chartered to publish official
+            standards. And as our goal expanded over time to include defining
+            non-web APIs, it became clear that being a Community Group was
+            restricting us. Therefore, in December 2024 we formed WinterTC (more
+            formally, TC55) as an Ecma International Technical Committee, which
+            does allow publishing standards. When WinterTC is fully set up, all
+            WinterCG work will move there, and then WinterCG will close.
+          </p>
+          <p>
+            By their very nature, Ecma TCs are not as open as W3C CGs, requiring
+            participants to either belong to an Ecma member or be an invited
+            expert. However, keep the spirit of openness, we plan to invite
+            anyone who does not belong to an Ecma member as an invited expert,
+            so that anyone is free to participate.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div id="does-the-wintercg-operate-by-consensus"></div>
+          <a
+            href="#does-the-wintertc-operate-by-consensus"
+            id="does-the-wintertc-operate-by-consensus"
+          >
+            <h2 class="text-2xl font-medium">
+              Does the WinterTC operate by consensus?
+            </h2>
+          </a>
+          <p>
+            (TODO!)
             The group strives for rough consensus among contributors for changes
             to work products. Instead of formal consensus, the editors for a
             given work product make the judgement on whether a change is ready
@@ -247,11 +296,12 @@ function Faq() {
           </p>
         </div>
         <div class="space-y-4">
-          <a href="#who-controls-the-wintercg" id="who-controls-the-wintercg">
-            <h2 class="text-2xl font-medium">Who controls the WinterCG?</h2>
+          <div id="who-controls-the-wintercg"></div>
+          <a href="#who-controls-the-wintertc" id="who-controls-the-wintertc">
+            <h2 class="text-2xl font-medium">Who controls the WinterTC?</h2>
           </a>
           <p>
-            The WinterCG is controlled by the community of people who are
+            The WinterTC is controlled by the community of people who are
             working in it. The chair(s) of the group help moderate discussion
             and help guide the group towards consensus on proposed changes.
           </p>
@@ -260,28 +310,23 @@ function Faq() {
             the following organizations:
           </p>
           <ul class="list-disc pl-7">
-            <li>Azion</li>
             <li>Bloomberg</li>
             <li>Cloudflare</li>
             <li>Deno</li>
-            <li>Fastly</li>
             <li>Igalia</li>
-            <li>Netlify</li>
             <li>Node.js</li>
-            <li>Shopify</li>
-            <li>Vercel</li>
-            <li>Suborbital</li>
           </ul>
           <p>
-            The group is open to anyone who also shares the interest in using
-            Web Platform APIs outside of the browser. You can join{" "}
+            You need to be a representative of an Ecma member or an invited
+            expert in order to participate in WinterTC. However, if you don't
+            fulfill those requirements and still want to participate, you can
+            ask to become an invited expert{" "}
             <a
-              href="https://www.w3.org/community/wintercg"
+              href="todo"
               class="text-pink-500 hover:text-pink-700 hover:underline"
             >
               here
-            </a>. You do not need to be a W3C member to participate. Community
-            group participation is free of charge.
+            </a>.
           </p>
         </div>
       </section>
@@ -291,20 +336,20 @@ function Faq() {
 }
 
 const DESCRIPTION =
-  "The Web-interoperable Runtimes Community Group aims to provide a space for JS runtimes to collaborate on API interoperability.";
+  "WinterTC is an Ecma International Technical Committee aiming to provide a space for JS runtimes to collaborate on API interoperability.";
 
 function Layout(props) {
   return (
     <>
       <Helmet>
-        <title>WinterCG</title>
+        <title>WinterTC</title>
         <link
           rel="shortcut icon"
           href="/static/logo.svg"
           type="image/svg+xml"
         />
         <meta name="description" content={DESCRIPTION} />
-        <meta name="og:title" content="WinterCG" />
+        <meta name="og:title" content="WinterTC" />
         <meta name="og:description" content={DESCRIPTION} />
         <meta name="og:image" content="https://wintercg.org/static/cover.png" />
         <meta name="og:url" content="https://wintercg.org" />
@@ -321,11 +366,13 @@ function Header() {
   return (
     <section class="flex items-center gap-6">
       <a class="flex-shrink-0" href="/">
-        <img src="/static/logo.svg" alt="wintercg logo" class="w-24 h-24" />
+        <img src="/static/logo.svg" alt="wintertc logo" class="w-24 h-24" />
       </a>
       <a href="/" class="block space-y-1">
-        <h1 class="text-4xl font-semibold">WinterCG</h1>
-        <p class="italic text-xl">Web-interoperable Runtimes Community Group</p>
+        <h1 class="text-4xl font-semibold">WinterTC</h1>
+        <p class="italic text-xl">
+          Technical Committee on Web-interoperable Server Runtimes
+        </p>
       </a>
     </section>
   );
@@ -346,7 +393,7 @@ const LINKS = [
   },
   {
     name: "Charter",
-    href: "https://github.com/wintercg/admin/blob/main/charter.md",
+    href: "https://ecma-international.org/technical-committees/tc55",
   },
 ];
 
@@ -357,11 +404,10 @@ function Links(props) {
         <li>
           <a
             href={props.selected === link.href ? undefined : link.href}
-            class={`block border-4 ${
-              props.selected === link.href
-                ? "bg-pink-200 text-black border-pink-300"
-                : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
-            } sm:p-2 md:p-3 font-medium text-lg text-center`}
+            class={`block border-4 ${props.selected === link.href
+              ? "bg-pink-200 text-black border-pink-300"
+              : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
+              } sm:p-2 md:p-3 font-medium text-lg text-center`}
           >
             {link.name}
           </a>
@@ -374,22 +420,9 @@ function Links(props) {
 // NOTE to all: keep this list sorted alphabetically by name.
 const PARTNER_LOGOS = [
   {
-    src: "/static/logos/alibaba.png",
-    href: "https://alibabagroup.com/",
-    name: "Alibaba",
-    restrict: "horizontal",
-  },
-  {
     src: null,
     href: "https://techatbloomberg.com/",
     name: "Bloomberg",
-  },
-  {
-    src: "/static/logos/bytedance.png",
-    href: "https://bytedance.com/",
-    name: "ByteDance",
-    restrict: "horizontal",
-    licenseExpiration: new Date(2026, 6, 28), // We are only licensed to use the image until 2026-06-29.
   },
   {
     src: "/static/logos/cloudflare.svg",
@@ -402,51 +435,15 @@ const PARTNER_LOGOS = [
     name: "Deno",
   },
   {
-    src: "/static/logos/fastly.svg",
-    href: "https://www.fastly.com/",
-    name: "Fastly",
-    restrict: "vertical",
-  },
-  {
     src: "/static/logos/igalia.png",
     href: "https://igalia.com/",
     name: "Igalia",
     restrict: "horizontal",
   },
   {
-    src: "/static/logos/netlify.svg",
-    href: "https://netlify.com/",
-    name: "Netlify",
-    restrict: "horizontal",
-  },
-  {
     src: "/static/logos/nodejs.svg",
     href: "https://nodejs.org",
     name: "Node.js",
-    restrict: "horizontal",
-  },
-  {
-    src: "/static/logos/shopify.svg",
-    href: "https://shopify.dev/",
-    name: "Shopify",
-    restrict: "horizontal",
-  },
-  {
-    src: "/static/logos/suborbital.svg",
-    href: "https://suborbital.dev/",
-    name: "Suborbital",
-    restrict: "horizontal",
-  },
-  {
-    src: "/static/logos/vercel.svg",
-    href: "https://vercel.com/",
-    name: "Vercel",
-    restrict: "horizontal",
-  },
-  {
-    src: "/static/logos/azion.svg",
-    href: "https://azion.com/",
-    name: "Azion",
     restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
@@ -456,7 +453,7 @@ function Logos() {
   return (
     <div>
       <p class="mt-16 text-center">
-        The WinterCG includes participants from:
+        The WinterTC includes participants from:
       </p>
       <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
@@ -493,12 +490,12 @@ function Footer() {
         </a>
       </p>
       <p class="text-sm text-gray-600">
-        Copyright © WinterCG. This work is licensed under the{" "}
+        Copyright © Ecma International. This work is licensed under{" "}
         <a
-          href="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"
+          href="https://ecma-international.org/policies/by-ipr/ecma-text-copyright-policy/#alternative-copyright-notice"
           class="hover:underline"
         >
-          W3C Software and Document License
+          Ecma's alternative copyright notice and license
         </a>.
       </p>
     </footer>
