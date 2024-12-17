@@ -76,7 +76,7 @@ function Work() {
       <Header />
       <Links selected="/work" />
       <p class="mt-12 text-lg">
-        The WinterTG is currently working on various standards to improve
+        WinterTC is currently working on various standards to improve
         interoperability across server-side runtimes:
       </p>
       <WorkItems items={work.specs} repoPrefix="wintercg/" />
@@ -98,8 +98,8 @@ function Faq() {
       <section class="mt-12 text-lg space-y-10">
         <div class="space-y-4">
           <div id="what-is-the-wintercg"></div>
-          <a href="#what-is-the-wintertc" id="what-is-the-wintertc">
-            <h2 class="text-2xl font-medium">What is the WinterTC?</h2>
+          <a href="#what-is-wintertc" id="what-is-wintertc">
+            <h2 class="text-2xl font-medium">What is WinterTC?</h2>
           </a>
           <p>
             The Technical Committee on Web-interoperable Runtimes (WinterTC) is
@@ -108,7 +108,7 @@ function Faq() {
             Workers / Deno Deploy), especially for Web Platform APIs.
           </p>
           <p>
-            The WinterTC is organized as{" "}
+            WinterTC is organized as{" "}
             <a
               href="https://www.ecma-international.org/"
               class="text-pink-500 hover:text-pink-700 hover:underline"
@@ -244,11 +244,11 @@ function Faq() {
         </div>
         <div class="space-y-4">
           <a
-            href="#is-this-the-same-as-the-wintercg"
-            id="is-this-the-same-as-the-wintercg"
+            href="#is-this-the-same-as-wintercg"
+            id="is-this-the-same-as-wintercg"
           >
             <h2 class="text-2xl font-medium">
-              Is this the same as the “WinterCG”?
+              Is this the same as “WinterCG”?
             </h2>
           </a>
           <p>
@@ -278,11 +278,11 @@ function Faq() {
         <div class="space-y-4">
           <div id="does-the-wintercg-operate-by-consensus"></div>
           <a
-            href="#does-the-wintertc-operate-by-consensus"
-            id="does-the-wintertc-operate-by-consensus"
+            href="#does-wintertc-operate-by-consensus"
+            id="does-wintertc-operate-by-consensus"
           >
             <h2 class="text-2xl font-medium">
-              Does the WinterTC operate by consensus?
+              Does WinterTC operate by consensus?
             </h2>
           </a>
           <p>
@@ -297,11 +297,11 @@ function Faq() {
         </div>
         <div class="space-y-4">
           <div id="who-controls-the-wintercg"></div>
-          <a href="#who-controls-the-wintertc" id="who-controls-the-wintertc">
-            <h2 class="text-2xl font-medium">Who controls the WinterTC?</h2>
+          <a href="#who-controls-wintertc" id="who-controls-wintertc">
+            <h2 class="text-2xl font-medium">Who controls WinterTC?</h2>
           </a>
           <p>
-            The WinterTC is controlled by the community of people who are
+            WinterTC is controlled by the community of people who are
             working in it. The chair(s) of the group help moderate discussion
             and help guide the group towards consensus on proposed changes.
           </p>
@@ -453,7 +453,7 @@ function Logos() {
   return (
     <div>
       <p class="mt-16 text-center">
-        The WinterTC includes participants from:
+        WinterTC includes participants from:
       </p>
       <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
