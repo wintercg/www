@@ -259,13 +259,18 @@ function Faq() {
             for anyone to participate, without needing to be a W3C member.
           </p>
           <p>
-            However, W3C Community Groups are not chartered to publish official
-            standards. And as our goal expanded over time to include defining
-            non-web APIs, it became clear that being a Community Group was
-            restricting us. Therefore, in December 2024 we formed WinterTC (more
-            formally, TC55) as an Ecma International Technical Committee, which
-            does allow publishing standards. When WinterTC is fully set up, all
-            WinterCG work will move there, and then WinterCG will close.
+            W3C Community Groups are set up to help people organize together,
+            but they can't publish standards. And as WinterCG matured, and our
+            goal expanded over time to include defining non-web APIs, it became
+            clear that we needed to form some working group or technical
+            committee, which can publish standards. Therefore, in December 2024
+            we formed WinterTC (formally, TC55) as an Ecma International
+            Technical Committee. When WinterTC is fully set up, all WinterCG
+            work will move there, and then WinterCG will close.
+          </p>
+          <p>
+            You can still be involved in WinterTC, but in order to become a
+            member of it, you need ...
           </p>
           <p>
             By their very nature, Ecma TCs are not as open as W3C CGs, requiring
@@ -275,26 +280,29 @@ function Faq() {
             so that anyone is free to participate.
           </p>
         </div>
-        <div class="space-y-4">
-          <div id="does-the-wintercg-operate-by-consensus"></div>
-          <a
-            href="#does-wintertc-operate-by-consensus"
-            id="does-wintertc-operate-by-consensus"
-          >
-            <h2 class="text-2xl font-medium">
-              Does WinterTC operate by consensus?
-            </h2>
-          </a>
-          <p>
-            (TODO!)
-            The group strives for rough consensus among contributors for changes
-            to work products. Instead of formal consensus, the editors for a
-            given work product make the judgement on whether a change is ready
-            for inclusion and has enough support from the group. The group
-            itself has a strict consensus policy outlined in the charter, which
-            is overseen by the group chairs.
-          </p>
-        </div>
+        {
+          // TODO: Uncomment and rewrite when we've figured out TC55's process.
+          //
+          // <div class="space-y-4">
+          //   <div id="does-the-wintercg-operate-by-consensus"></div>
+          //   <a
+          //     href="#does-wintertc-operate-by-consensus"
+          //     id="does-wintertc-operate-by-consensus"
+          //   >
+          //     <h2 class="text-2xl font-medium">
+          //       Does WinterTC operate by consensus?
+          //     </h2>
+          //   </a>
+          //   <p>
+          //     The group strives for rough consensus among contributors for changes
+          //     to work products. Instead of formal consensus, the editors for a
+          //     given work product make the judgement on whether a change is ready
+          //     for inclusion and has enough support from the group. The group
+          //     itself has a strict consensus policy outlined in the charter, which
+          //     is overseen by the group chairs.
+          //   </p>
+          // </div>
+        }
         <div class="space-y-4">
           <div id="who-controls-the-wintercg"></div>
           <a href="#who-controls-wintertc" id="who-controls-wintertc">
@@ -316,11 +324,39 @@ function Faq() {
             <li>Igalia</li>
             <li>Node.js</li>
           </ul>
+        </div>
+        <div class="space-y-4">
+          <a
+            href="#how-can-i-participate"
+            id="how-can-i-participate"
+          >
+            <h2 class="text-2xl font-medium">
+              How can I participate?
+            </h2>
+          </a>
           <p>
-            You need to be a representative of an Ecma member or an invited
-            expert in order to participate in WinterTC. However, if you don't
-            fulfill those requirements and still want to participate, you can
-            ask to become an invited expert{" "}
+            The work of WinterTC happens openly{" "}
+            <a
+              href="https://github.com/wintercg"
+              class="text-pink-500 hover:text-pink-700 hover:underline"
+            >
+              on Github
+            </a>
+            , and most of the discussion and conversation around it happens in
+            <a
+              href="https://matrix.to/#/#wintercg:matrix.org"
+              class="text-pink-500 hover:text-pink-700 hover:underline"
+            >
+              our Matrix room
+            </a>
+            . You're welcome to participate in both of them.
+          </p>
+          <p>
+            Only members of WinterTC can participate in WinterTC meetings,
+            though. In order to be a member of WinterTC, you need to be a
+            representative of an Ecma member, or an Ecma invited expert.
+            However, if you don't fulfill those requirements and still want to
+            become a member, you can ask to become an invited expert{" "}
             <a
               href="todo"
               class="text-pink-500 hover:text-pink-700 hover:underline"
@@ -420,9 +456,22 @@ function Links(props) {
 // NOTE to all: keep this list sorted alphabetically by name.
 const PARTNER_LOGOS = [
   {
+    src: "/static/logos/alibaba.png",
+    href: "https://alibabagroup.com/",
+    name: "Alibaba",
+    restrict: "horizontal",
+  },
+  {
     src: null,
     href: "https://techatbloomberg.com/",
     name: "Bloomberg",
+  },
+  {
+    src: "/static/logos/bytedance.png",
+    href: "https://bytedance.com/",
+    name: "ByteDance",
+    restrict: "horizontal",
+    licenseExpiration: new Date(2026, 6, 28), // We are only licensed to use the image until 2026-06-29.
   },
   {
     src: "/static/logos/cloudflare.svg",
@@ -435,15 +484,51 @@ const PARTNER_LOGOS = [
     name: "Deno",
   },
   {
+    src: "/static/logos/fastly.svg",
+    href: "https://www.fastly.com/",
+    name: "Fastly",
+    restrict: "vertical",
+  },
+  {
     src: "/static/logos/igalia.png",
     href: "https://igalia.com/",
     name: "Igalia",
     restrict: "horizontal",
   },
   {
+    src: "/static/logos/netlify.svg",
+    href: "https://netlify.com/",
+    name: "Netlify",
+    restrict: "horizontal",
+  },
+  {
     src: "/static/logos/nodejs.svg",
     href: "https://nodejs.org",
     name: "Node.js",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/shopify.svg",
+    href: "https://shopify.dev/",
+    name: "Shopify",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/suborbital.svg",
+    href: "https://suborbital.dev/",
+    name: "Suborbital",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/vercel.svg",
+    href: "https://vercel.com/",
+    name: "Vercel",
+    restrict: "horizontal",
+  },
+  {
+    src: "/static/logos/azion.svg",
+    href: "https://azion.com/",
+    name: "Azion",
     restrict: "horizontal",
   },
   /** TODO: Add additional logos here */
@@ -453,7 +538,7 @@ function Logos() {
   return (
     <div>
       <p class="mt-16 text-center">
-        WinterTC includes participants from:
+        The work of WinterTC (and its predecessor WinterCG) has included participation from:
       </p>
       <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
@@ -490,13 +575,7 @@ function Footer() {
         </a>
       </p>
       <p class="text-sm text-gray-600">
-        Copyright © Ecma International. This work is licensed under{" "}
-        <a
-          href="https://ecma-international.org/policies/by-ipr/ecma-text-copyright-policy/#alternative-copyright-notice"
-          class="hover:underline"
-        >
-          Ecma's alternative copyright notice and license
-        </a>.
+        Copyright © Ecma International.
       </p>
     </footer>
   );
