@@ -102,10 +102,11 @@ function Faq() {
             <h2 class="text-2xl font-medium">What is WinterTC?</h2>
           </a>
           <p>
-            The Technical Committee on Web-interoperable Runtimes (WinterTC) is
-            a community of people who are interested in interoperability across
-            server-side (Deno / Node.js) or edge JavaScript runtimes (Cloudflare
-            Workers / Deno Deploy), especially for Web Platform APIs.
+            The Technical Committee on Web-interoperable Server Runtimes
+            (WinterTC) is a community of people who are interested in
+            interoperability across server-side (Deno / Node.js) or edge
+            JavaScript runtimes (Cloudflare Workers / Deno Deploy), especially
+            for Web Platform APIs.
           </p>
           <p>
             WinterTC is organized as{" "}
