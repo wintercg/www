@@ -343,7 +343,7 @@ function Faq() {
             >
               on Github
             </a>
-            , and most of the discussion and conversation around it happens in
+            , and most of the discussion and conversation around it happens in{" "}
             <a
               href="https://matrix.to/#/#wintercg:matrix.org"
               class="text-pink-500 hover:text-pink-700 hover:underline"
