@@ -17,7 +17,7 @@ function Home() {
         WinterTC (TC55) is an Ecma International Technical Committee that aims
         to achieve some level of API interoperability across server-side
         JavaScript runtimes, especially for APIs that are common with the web.
-        This is done by specifying a{" "}
+        This is done by standardizing a{" "}
         <a
           href="https://min-common-api.proposal.wintercg.org"
           class="text-pink-500 hover:text-pink-700 hover:underline"
@@ -109,16 +109,15 @@ function Faq() {
             for Web Platform APIs.
           </p>
           <p>
-            WinterTC is organized as{" "}
+            WinterTC is organized as Ecma International's{" "}
             <a
-              href="https://www.ecma-international.org/"
+              href="https://ecma-international.org/technical-committees/tc55/"
               class="text-pink-500 hover:text-pink-700 hover:underline"
             >
-              Ecma International
-            </a>'s Technical Committee number 55 (TC55). This gives the group
-            access to Ecma's vast infrastructure and its IPR policy work, as
-            well as the ability to publish standards. This is the same type of
-            committee as{" "}
+              Technical Committee number 55 (TC55)
+            </a>. This gives the group access to Ecma's vast infrastructure and
+            its IPR policy work, as well as the ability to publish standards.
+            This is the same type of committee as{" "}
             <a
               href="https://tc39.es/"
               class="text-pink-500 hover:text-pink-700 hover:underline"
@@ -269,17 +268,6 @@ function Faq() {
             Technical Committee. When WinterTC is fully set up, all WinterCG
             work will move there, and then WinterCG will close.
           </p>
-          <p>
-            You can still be involved in WinterTC, but in order to become a
-            member of it, you need ...
-          </p>
-          <p>
-            By their very nature, Ecma TCs are not as open as W3C CGs, requiring
-            participants to either belong to an Ecma member or be an invited
-            expert. However, keep the spirit of openness, we plan to invite
-            anyone who does not belong to an Ecma member as an invited expert,
-            so that anyone is free to participate.
-          </p>
         </div>
         {
           // TODO: Uncomment and rewrite when we've figured out TC55's process.
@@ -310,13 +298,13 @@ function Faq() {
             <h2 class="text-2xl font-medium">Who controls WinterTC?</h2>
           </a>
           <p>
-            WinterTC is controlled by the community of people who are
-            working in it. The chair(s) of the group help moderate discussion
-            and help guide the group towards consensus on proposed changes.
+            WinterTC is controlled by the community of people who are working in
+            it. The chair(s) of the group help moderate discussion and help
+            guide the group towards consensus on proposed changes.
           </p>
           <p>
-            Currently the group consists of individual members, and members from
-            the following organizations:
+            Currently the group consists of individual members, as well as
+            members from the following organizations:
           </p>
           <ul class="list-disc pl-7">
             <li>Bloomberg</li>
@@ -343,27 +331,28 @@ function Faq() {
             >
               on Github
             </a>
-            , and most of the discussion and conversation around it happens in{" "}
+            , and most of the discussion and conversation around it happens in
+            {" "}
             <a
               href="https://matrix.to/#/#wintercg:matrix.org"
               class="text-pink-500 hover:text-pink-700 hover:underline"
             >
               our Matrix room
             </a>
-            . You're welcome to participate in both of them.
+            . Anyone is welcome to participate in both of them.
           </p>
           <p>
-            Only members of WinterTC can participate in WinterTC meetings,
-            though. In order to be a member of WinterTC, you need to be a
-            representative of an Ecma member, or an Ecma invited expert.
-            However, if you don't fulfill those requirements and still want to
-            become a member, you can ask to become an invited expert{" "}
+            Only WinterTC delegates and invited experts can participate in
+            WinterTC meetings, though. Delegates need to belong to an Ecma
+            member organization, but anyone else who wants to be involved in
+            WinterTC can become an invited expert. To do so, you can{" "}
             <a
-              href="todo"
+              href="https://github.com/WinterCG/admin/issues/new/choose"
               class="text-pink-500 hover:text-pink-700 hover:underline"
             >
-              here
-            </a>.
+              open an issue
+            </a>{" "}
+            in the WinterTC admin repo.
           </p>
         </div>
       </section>
@@ -429,7 +418,7 @@ const LINKS = [
     href: "https://github.com/wintercg",
   },
   {
-    name: "Charter",
+    name: "Scope",
     href: "https://ecma-international.org/technical-committees/tc55",
   },
 ];
@@ -442,8 +431,8 @@ function Links(props) {
           <a
             href={props.selected === link.href ? undefined : link.href}
             class={`block border-4 ${props.selected === link.href
-              ? "bg-pink-200 text-black border-pink-300"
-              : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
+                ? "bg-pink-200 text-black border-pink-300"
+                : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
               } sm:p-2 md:p-3 font-medium text-lg text-center`}
           >
             {link.name}
@@ -539,7 +528,8 @@ function Logos() {
   return (
     <div>
       <p class="mt-16 text-center">
-        The work of WinterTC (and its predecessor WinterCG) has included participation from:
+        The work of WinterTC (and its predecessor WinterCG) has included
+        participation from:
       </p>
       <div class="mt-8 flex gap-4 flex-wrap justify-evenly sm:justify-evenly items-center">
         {PARTNER_LOGOS.map(({ src, href, name, restrict }) => (
