@@ -334,7 +334,7 @@ function Faq() {
             , and most of the discussion and conversation around it happens in
             {" "}
             <a
-              href="https://matrix.to/#/#wintercg:matrix.org"
+              href="https://matrix.to/#/#wintertc:matrix.org"
               class="text-pink-500 hover:text-pink-700 hover:underline"
             >
               our Matrix room
@@ -557,7 +557,7 @@ function Footer() {
   return (
     <footer class="mt-16 text-center border-t-1 border-gray-100 p-4 space-y-4">
       <p>
-        <a href="https://matrix.to/#/#wintercg:matrix.org">
+        <a href="https://matrix.to/#/#wintertc:matrix.org">
           <img
             class="h-6 inline-block"
             src="/static/logos/matrix.svg"
