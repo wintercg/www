@@ -510,6 +510,12 @@ const PARTNER_LOGOS = [
     restrict: "horizontal",
   },
   {
+    src: "/static/logos/tencent.png",
+    href: "https://www.tencent.com/",
+    name: "Tencent",
+    restrict: "horizontal",
+  },
+  {
     src: "/static/logos/vercel.svg",
     href: "https://vercel.com/",
     name: "Vercel",
