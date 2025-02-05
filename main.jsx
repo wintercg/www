@@ -2,8 +2,7 @@
 
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { serve } from "https://deno.land/std@0.135.0/http/server.ts";
-import { serveDir } from "https://deno.land/std@0.135.0/http/file_server.ts";
+import { serveDir } from "jsr:@std/http/file-server";
 import { Fragment, h, Helmet, ssr } from "https://crux.land/nanossr@0.0.4";
 
 import work from "./data/work.json" with { type: "json" };
@@ -572,9 +571,12 @@ function Footer() {
   );
 }
 
-console.log("Listening on http://localhost:8000");
-await serve((req) => {
+Deno.serve((req) => {
   const url = new URL(req.url);
+  if (url.hostname === "wintercg.org" || url.hostname === "wintertc.com") {
+    url.hostname = "wintertc.org";
+    return Response.redirect(url, 301);
+  }
   if (url.pathname === "/") {
     return ssr(() => <Home />);
   } else if (url.pathname === "/work") {
