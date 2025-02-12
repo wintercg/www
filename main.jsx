@@ -18,7 +18,7 @@ function Home() {
         JavaScript runtimes, especially for APIs that are common with the web.
         This is done by standardizing a{" "}
         <a
-          href="https://min-common-api.proposal.wintercg.org"
+          href="https://min-common-api.proposal.wintertc.org"
           class="text-pink-500 hover:text-pink-700 hover:underline"
         >
           “minimum common API”
@@ -376,8 +376,8 @@ function Layout(props) {
         <meta name="description" content={DESCRIPTION} />
         <meta name="og:title" content="WinterTC" />
         <meta name="og:description" content={DESCRIPTION} />
-        <meta name="og:image" content="https://wintercg.org/static/cover.png" />
-        <meta name="og:url" content="https://wintercg.org" />
+        <meta name="og:image" content="https://wintertc.org/static/cover.png" />
+        <meta name="og:url" content="https://wintertc.org" />
         <meta name="og:type" content="website" />
       </Helmet>
       <div class="mx-auto px-4 py-8 max-w-screen-md">

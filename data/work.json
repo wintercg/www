@@ -4,13 +4,13 @@
       "name": "Minimum Common API",
       "description": "The minimal collection of Web Platform APIs that ought to be implemented by Web-interoperable runtimes.",
       "repo": "proposal-minimum-common-api",
-      "specification": "https://min-common-api.proposal.wintercg.org"
+      "specification": "https://min-common-api.proposal.wintertc.org"
     },
     {
       "name": "Sockets API",
       "description": "A proposal incubating an API for establishing TCP connections in non-browser JavaScript environments.",
       "repo": "proposal-sockets-api",
-      "specification": "https://sockets-api.proposal.wintercg.org"
+      "specification": "https://sockets-api.proposal.wintertc.org"
     },
     {
       "name": "CLI API",
