@@ -575,7 +575,16 @@ function Footer() {
 
 const ssrOptions = {
   tw: {
-    theme: { colors },
+    theme: {
+      colors,
+      extend: {
+        colors: {
+          orange: {
+            500: "#fc7c00",
+          }
+        }
+      }
+    },
   },
 };
 
