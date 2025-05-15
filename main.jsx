@@ -79,7 +79,7 @@ function Work() {
         WinterTC is currently working on various standards to improve
         interoperability across server-side runtimes:
       </p>
-      <WorkItems items={work.specs} repoPrefix="wintercg/" />
+      <WorkItems items={work.specs} repoPrefix="WinterTC55/" />
       <p class="mt-12 text-lg">
         We are also collaborating with other standards bodies to make web
         platform APIs more suitable to server-side runtimes:
@@ -326,7 +326,7 @@ function Faq() {
           <p>
             The work of WinterTC happens openly{" "}
             <a
-              href="https://github.com/wintercg"
+              href="https://github.com/WinterTC55"
               class="text-orange-500 hover:text-orange-700 hover:underline"
             >
               on Github
@@ -347,7 +347,7 @@ function Faq() {
             member organization, but anyone else who wants to be involved in
             WinterTC can become an invited expert. To do so, you can{" "}
             <a
-              href="https://github.com/WinterCG/admin/issues/new/choose"
+              href="https://github.com/WinterTC55/admin/issues/new/choose"
               class="text-orange-500 hover:text-orange-700 hover:underline"
             >
               open an issue
@@ -415,7 +415,7 @@ const LINKS = [
   },
   {
     name: "GitHub",
-    href: "https://github.com/wintercg",
+    href: "https://github.com/WinterTC55",
   },
   {
     name: "Scope",

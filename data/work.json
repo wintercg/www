@@ -28,7 +28,7 @@
     {
       "name": "Web Crypto Streams",
       "description": "We are gathering requirements in order to define streaming support in the Web Crypto API, with improvements to be developed in the WICG and the Web Application Security Working Group.",
-      "repo": "wintercg/proposal-webcrypto-streams"
+      "repo": "WinterTC55/proposal-webcrypto-streams"
     }
   ]
 }
