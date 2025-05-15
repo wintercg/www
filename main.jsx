@@ -3,7 +3,8 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { serveDir } from "jsr:@std/http/file-server";
-import { Fragment, h, Helmet, ssr } from "https://crux.land/nanossr@0.0.4";
+import { Fragment, h, Helmet, ssr } from "./nanossr.ts";
+import * as colors from "https://esm.sh/twind@0.16.16/colors.mjs";
 
 import work from "./data/work.json" with { type: "json" };
 
@@ -19,7 +20,7 @@ function Home() {
         This is done by standardizing a{" "}
         <a
           href="https://min-common-api.proposal.wintertc.org"
-          class="text-pink-500 hover:text-pink-700 hover:underline"
+          class="text-orange-500 hover:text-orange-700 hover:underline"
         >
           “minimum common API”
         </a>{" "}
@@ -29,7 +30,7 @@ function Home() {
         new interoperable server-side APIs.{" "}
         <a
           href="/faq"
-          class="text-pink-500 hover:text-pink-700 hover:underline"
+          class="text-orange-500 hover:text-orange-700 hover:underline"
         >
           Learn more.
         </a>
@@ -50,14 +51,14 @@ function WorkItems(props) {
           <p class="flex gap-4">
             <a
               href={`https://github.com/${props.repoPrefix ?? ""}${item.repo}`}
-              class="text-pink-500 hover:text-pink-700 hover:underline"
+              class="text-orange-500 hover:text-orange-700 hover:underline"
             >
               Repository
             </a>
             {item.specification && (
               <a
                 href={item.specification}
-                class="text-pink-500 hover:text-pink-700 hover:underline"
+                class="text-orange-500 hover:text-orange-700 hover:underline"
               >
                 Specification
               </a>
@@ -111,7 +112,7 @@ function Faq() {
             WinterTC is organized as Ecma International's{" "}
             <a
               href="https://ecma-international.org/technical-committees/tc55/"
-              class="text-pink-500 hover:text-pink-700 hover:underline"
+              class="text-orange-500 hover:text-orange-700 hover:underline"
             >
               Technical Committee number 55 (TC55)
             </a>. This gives the group access to Ecma's vast infrastructure and
@@ -119,7 +120,7 @@ function Faq() {
             This is the same type of committee as{" "}
             <a
               href="https://tc39.es/"
-              class="text-pink-500 hover:text-pink-700 hover:underline"
+              class="text-orange-500 hover:text-orange-700 hover:underline"
             >
               TC39
             </a>, which standardizes the JavaScript language.
@@ -326,7 +327,7 @@ function Faq() {
             The work of WinterTC happens openly{" "}
             <a
               href="https://github.com/wintercg"
-              class="text-pink-500 hover:text-pink-700 hover:underline"
+              class="text-orange-500 hover:text-orange-700 hover:underline"
             >
               on Github
             </a>
@@ -334,7 +335,7 @@ function Faq() {
             {" "}
             <a
               href="https://matrix.to/#/#wintertc:matrix.org"
-              class="text-pink-500 hover:text-pink-700 hover:underline"
+              class="text-orange-500 hover:text-orange-700 hover:underline"
             >
               our Matrix room
             </a>
@@ -347,7 +348,7 @@ function Faq() {
             WinterTC can become an invited expert. To do so, you can{" "}
             <a
               href="https://github.com/WinterCG/admin/issues/new/choose"
-              class="text-pink-500 hover:text-pink-700 hover:underline"
+              class="text-orange-500 hover:text-orange-700 hover:underline"
             >
               open an issue
             </a>{" "}
@@ -429,10 +430,11 @@ function Links(props) {
         <li>
           <a
             href={props.selected === link.href ? undefined : link.href}
-            class={`block border-4 ${props.selected === link.href
-                ? "bg-pink-200 text-black border-pink-300"
-                : "bg-pink-500 text-white border-pink-300 hover:border-pink-600"
-              } sm:p-2 md:p-3 font-medium text-lg text-center`}
+            class={`block border-4 ${
+              props.selected === link.href
+                ? "bg-orange-200 text-black border-orange-300"
+                : "bg-orange-500 text-white border-orange-300 hover:border-orange-600"
+            } sm:p-2 md:p-3 font-medium text-lg text-center`}
           >
             {link.name}
           </a>
@@ -571,6 +573,21 @@ function Footer() {
   );
 }
 
+const ssrOptions = {
+  tw: {
+    theme: {
+      colors,
+      extend: {
+        colors: {
+          orange: {
+            500: "#fc7c00",
+          }
+        }
+      }
+    },
+  },
+};
+
 Deno.serve((req) => {
   const url = new URL(req.url);
   if (url.hostname === "wintercg.org" || url.hostname === "wintertc.com") {
@@ -578,11 +595,11 @@ Deno.serve((req) => {
     return Response.redirect(url, 301);
   }
   if (url.pathname === "/") {
-    return ssr(() => <Home />);
+    return ssr(() => <Home />, ssrOptions);
   } else if (url.pathname === "/work") {
-    return ssr(() => <Work />);
+    return ssr(() => <Work />, ssrOptions);
   } else if (url.pathname === "/faq") {
-    return ssr(() => <Faq />);
+    return ssr(() => <Faq />, ssrOptions);
   } else if (url.pathname.startsWith("/static/")) {
     return serveDir(req, {
       urlRoot: "static",
